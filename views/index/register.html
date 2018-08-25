@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/index/register.css" rel="stylesheet" type="text/css"/>
+    <title>用户注册</title>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="j-logo">Moop</span>
+            <p>欢迎注册</p>
+        </div>
+    </header>
+    <div class="j-register">
+        <div class="j-register-head">
+            <ul>
+                <li class="current">1.选定组织机构信息</li>
+                <li>2.填写注册用户信息</li>
+                <li>3.完成注册</li>
+            </ul>
+            <p>已有账号<a href="/">登录</a><i class="j-icon">&#xe315</i></p>
+        </div>
+        <div class="j-register-body">
+            <div class="j-register-title">
+                <p>账号注册</p>
+            </div>
+            <div class="j-register-item">
+                <p>选定组织机构信息</p>
+                <span>选择您所在的组织、机构、角色信息，以下选项请按顺序选择。</span>
+                <div>
+                    <p>组织：</p>
+                    <select id="j-org" data-name="org_id">
+                        <option value="">—请选择—</option>
+                    </select>
+                    <span class="j-icon"></span>
+                </div>
+                <div>
+                    <p>机构：</p>
+                    <select id="j-dept" data-name="dept_id"><option value="">—请先选择组织—</option></select>
+                    <div id="j-dept-select"></div>
+                    <span class="j-icon"></span>
+                </div>
+                <div>
+                    <p>角色：</p>
+                    <select id="j-role"  data-name="role_id">
+                        <option value="">—请先选择组织—</option>
+                    </select>
+                    <span class="j-icon"></span>
+                </div>
+            </div>
+            <div class="j-register-item">
+                <p>填写注册用户信息</p>
+                <span>填写按照要求填写您的账号信息。</span>
+                <div>
+                    <p>用户名：</p>
+                    <input id="j-account"  data-name="account" type="text" placeholder="1位以上数字、字母或@符"/>
+                    <span class="j-icon"></span>
+                </div>
+                <div>
+                    <p>密码：</p>
+                    <input id="j-password" data-name="password" type="password" placeholder="3位以上数字、字母或字符"/>
+                    <span class="j-icon"></span>
+                </div>
+                <div>
+                    <p>确认密码：</p>
+                    <input id="j-re-password" type="password" placeholder="请再输入一次密码"/>
+                    <span class="j-icon"></span>
+                </div>
+                <div>
+                    <p>邮箱：</p>
+                    <input id="j-email" type="text" placeholder="请输入您的邮箱"/>
+                    <span class="j-icon"></span>
+                </div>
+            </div>
+        </div>
+        <div class="j-register-button">注册</div>
+    </div>
+</body>
+<script src="/js/lib/jquery.js"></script>
+<script src="/js/lib/public.js"></script>
+<script src="/js/index/register.js"></script>
+</html>

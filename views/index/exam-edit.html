@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="/css/lib/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/index/exam-edit.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <h4><input type="text" class="j-exam-name"/><button class="j-exam-complete">完成试卷编辑</button></h4>
+    <div class="j-header">
+        <h4>类型选择和统计</h4>
+        <p>点击下方题型按钮添加题目</p>
+        <table>
+            <tr>
+                <td>课程类型：</td>
+                <td><span class="j-create-question" data-type="1">单选题</span></td>
+                <td><span class="j-create-question" data-type="2">多选题</span></td>
+                <td><span class="j-create-question" data-type="4">填空题</span></td>
+                <td><span class="j-create-question" data-type="3">简答题</span></td>
+                <td>总数</td>
+                <td>总分</td>
+            </tr>
+            <tr>
+                <td>统计：</td>
+                <td class="j-danx-number">0</td>
+                <td class="j-duox-number">0</td>
+                <td class="j-tk-number">0</td>
+                <td class="j-jd-number">0</td>
+                <td class="j-total-number">0</td>
+                <td class="j-total-score">0</td>
+            </tr>
+        </table>
+    </div>
+    <div class="j-create-pan">
+    </div>
+    <div class="j-body">
+
+    </div>
+</body>
+<script src="/js/lib/jquery.js"></script>
+<script src="/js/lib/jquery-ui.js"></script>
+<script src="/js/lib/public.js"></script>
+<script src="/js/exam/exam-edit.js"></script>
+<!--<script>
+    $(function(){
+        $( ".sort" ).sortable({
+            stop: function( event, ui ) {console.log(event,ui)}
+        });
+    })
+</script>-->
+</html>

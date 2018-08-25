@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html style="height: 100%;">
+
+<head>
+    <title>ONLYOFFICE Api Documentation</title>
+</head>
+<body style="height: 80%; margin: 0;">
+<div id="placeholder1" style="height: 10px;width:10px"></div>
+
+<div id="placeholder2" style="height: 100%"></div>
+       
+
+<!--<script type="text/javascript" src="http://192.168.1.106/web-apps/apps/api/documents/api.js"></script>-->
+
+<script type="text/javascript">
+var onDownloadAs = function (event) {
+    console.log(event.data);
+};
+
+var onReady = function() {
+    console.log("ONLYOFFICE Document Editor is ready");
+    docEditor.downloadAs();
+};
+
+var onOutdatedVersion = function () {
+    console.log("ONLYOFFICE Document Editor is onOutdatedVersion");
+    docEditor.downloadAs();
+};
+
+var onMessage = function(msg){
+    console.log("ONLYOFFICE Document Editor is onOutdatedVersion:" , msg);
+};
+
+var onOpenDocument = function(e){
+ console.log("ONLYOFFICE Document Editor is onOutdatedVersion:" , e);
+};
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+var a = {
+            
+           
+            "height" : '80%',
+            "width" : '80%',
+            "events" : {
+                "onDownloadAs" : onDownloadAs,
+                "onReady" : onReady,
+                "onOutdatedVersion" : onOutdatedVersion,
+                "onLoading" : onMessage
+            },
+            "document": {
+                "fileType": "docx",
+                "key": "11111111111222",
+                "title": "999docx",
+                "url": "http://192.168.1.105:1166/123.docx"
+            }
+         ,  "documentType": "text"
+    // "permissions": {
+    //         "download": false,
+    //         "edit": false,
+    //         "print": false,
+    //         "review": true
+    //     },
+    // 
+    ,
+    "editorConfig": {
+                    "customization" : {
+                        "zoom" : 80
+                    }
+                }
+    
+        }
+
+
+
+var b = {
+                "document": {
+                    "fileType": "xlsx",
+                    "key": "222222222222",
+                    "title": "Example Spreadsheet Title.xlsx",
+                    "url": "http://192.168.1.105:1166/123.xlsx"
+                },
+                "documentType": "spreadsheet",
+                "height": "100%",
+                "width": "100%"
+            };
+
+
+var c =  {
+                "document": {
+                    "fileType": "pptx",
+                    "key": "333333333",
+                    "title": "Example Presentation Title.pptx",
+                    "url": "http://192.168.1.105:1166/123.pptx"
+                },
+                "documentType": "presentation",
+                "height": "100%",
+                "width": "100%"
+            };
+
+
+window.docEditor = new DocsAPI.DocEditor("placeholder1", a);
+
+
+
+
+
+
+//onRequestHistory,onRequestHistoryClose,onRequestRestore,onRequestEmailAddresses,onRequestEditRights
+       
+
+    //    window.docEditor = new DocsAPI.DocEditor("placeholder2", {
+    //         "document": {
+    //             "fileType": "xls",
+    //             "key": "6226990033",
+    //             "title": "999docx",
+    //             "url": "http://192.168.1.105:1166/123.xls"
+    //         }
+    //         //  ,  "documentType": "spreadsheet"
+
+    //     });
+
+
+
+
+
+    </script>
+
+<script src="./node_modules/socket.io/node_modules/socket.io-client/socket.io.js"></script>
+
+
+<script>
+   function emitButton(){
+    var socket = io('http://localhost:1177');
+
+     socket.emit('join', { my: '88888888' });
+   }
+</script>
+
+
+<div ><button id='socketButton' onclick='emitButton()'> 事件触发按钮 </button> </div>
+
+
+
+<script>
+    // var socket = io('http://localhost:1177');
+    // // 自定义一个'news'事件
+    // socket.on('99', function (data) {
+    //     console.log(data);
+    //     // 发送事件到服务端 
+    // });
+
+    // socket.emit('88', { my: '客户端发来的消息' });
+
+    // socket.on('000', { my: '接受自定义的消息' });
+
+   
+
+</script>
+
+
+</body>
+
+</html>

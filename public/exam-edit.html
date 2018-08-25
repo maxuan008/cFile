@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="./css/lib/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/index/exam-edit.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <h4>试题名称</h4>
+    <div class="j-header">
+        <h4>类型选择和统计</h4>
+        <p>点击下方题型按钮添加题目</p>
+        <table>
+            <tr>
+                <td>课程类型：</td>
+                <td><span>单选题</span></td>
+                <td><span>多选题</span></td>
+                <td><span>填空题</span></td>
+                <td><span>简答题</span></td>
+                <td>总数</td>
+                <td>总分</td>
+            </tr>
+            <tr>
+                <td>统计：</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </div>
+    <div class="j-create-pan">
+        <h4>试题编辑</h4>
+        <div data-type="choice-one">
+            <p>单选题——至少设置两个选项，其中有且只有一个为正确答案</p>
+            <div class="j-half">
+                <p>分值：</p>
+                <span>
+                    <input type="number"/>
+                </span>
+            </div>
+            <div class="j-half">
+                <p>难度系数：</p>
+                <span>
+                    <input type="number"/>
+                </span>
+            </div>
+            <div>
+                <p>问题描述：</p>
+                <span>
+                    <textarea></textarea>
+                    <a>添加题目解析</a>
+                </span>
+            </div>
+            <!--<div>
+                <p>题目解析：</p>
+                <span>
+                    <textarea></textarea>
+                </span>
+            </div>-->
+            <div>
+                <p>选项设置：</p>
+                <span>
+                    <h4>1</h4>
+                    <span>
+                        <input type="text"/>
+                    </span>
+                    <i class="j-icon j-set-as-answer">&#xe835</i>
+                    <p>设为答案</p>
+                    <i class="j-icon j-remove-option">&#xe9d6</i>
+                    <a>添加选项</a>
+                </span>
+            </div>
+            <button class="j-complete-edit">完成编辑</button>
+            <button class="j-cancel-edit">取消</button>
+        </div>
+    </div>
+    <div class="j-body">
+        <h4>试题预览</h4>
+        <div>
+            <button class="j-icon">&#xe5cd</button>
+            <div>1.题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干题干</div>
+            <span>
+                <i class="j-icon">&#xe836</i>
+                <p>选项选项选项选项选项</p>
+            </span>
+            <span>
+                <i class="j-icon">&#xe86c</i>
+                <p>选项选项选项选项选项</p>
+            </span>
+            <span>
+                <i class="j-icon">&#xe836</i>
+                <p>选项选项选项选项选项</p>
+            </span>
+            <span>
+                <i class="j-icon">&#xe836</i>
+                <p>选项选项选项选项选项</p>
+            </span>
+        </div>
+        <div>
+            <button class="j-icon">&#xe5cd</button>
+            <div>1.题干题干题干题干题干题干___1___干题干题干题干题干题干题干题干题干题干题干题干___2___题干题干题干题干题干题干</div>
+            <span>
+                <i class="j-icon">1.</i>
+                <span>
+                    <input/>
+                </span>
+            </span>
+           <span>
+                <i class="j-icon">2.</i>
+                <span>
+                    <input/>
+                </span>
+            </span>
+        </div>
+        <div>
+            <button class="j-icon">&#xe5cd</button>
+            <div>1.题干题干题干题干题干题干___1___干题干题干题干题干题干题干题干题干题干题干题干___2___题干题干题干题干题干题干</div>
+            <span class="j-full-width">
+                <textarea></textarea>
+            </span>
+        </div>
+    </div>
+</body>
+<script src="./js/lib/jquery.js"></script>
+<script src="./js/lib/jquery-ui.js"></script>
+<script src="./js/lib/public.js"></script>
+<script>
+    $(function(){
+        $( ".sort" ).sortable({
+            stop: function( event, ui ) {console.log(event,ui)}
+        });
+    })
+</script>
+</html>

@@ -1,0 +1,40 @@
+/*登录注册*/
+.j-sign-box{box-sizing:border-box;display:none;position: fixed;width: 380px;left: 50%;top:50%;margin-left: -190px;margin-top: -130px;z-index: 101;background: #fff;padding:0 20px;}
+.j-sign-header{display: block;height: 50px;width: 100%;float: left;box-sizing:border-box;border-bottom: 1px solid #dfdfdf}
+.j-sign-header>div{font-weight: 400;width: 60px;height: 49px;line-height:49px;float: left;font-size: 18px;text-align: center;color: #787d82;cursor: pointer;}
+.j-sign-header>span{width: 20px;display: block;height: 49px;line-height: 49px;color: #ccc;font-size: 18px;float: right;cursor: pointer;text-align: center}
+.j-sign-header>span:hover{color: red}
+.j-sign-header>div:hover{color: rgba(0,0,0,.5)}
+.j-sign-header>div.active,.j-sign-header>div.active:hover{color:#00a984;cursor: default;border-bottom: 1px solid #00a984}
+.j-sign-body>div{margin-top:20px;width: 100%;height: 40px;box-sizing: border-box;border: 1px solid #dfdfdf;float: left}
+.j-sign-body>div>span{display:block;float:left;width: 40px;height: 38px;line-height: 38px;font-size: 20px;text-align: center;color: #bbb;font-weight: bold}
+.j-sign-body>div>input{opacity:.7;color:#000;width: 260px;height: 36px;border: none;outline:none;box-shadow:none;font-size: 14px;line-height: 38px;float: left;display: block;box-sizing: border-box}
+.j-sign-body>div>i{cursor:pointer;display: block;width: 20px;height: 20px;text-align: center;line-height: 20px;margin: 9px;color: #bbb;border-radius: 50%;float: left;font-size: 14px}
+.j-sign-body>div>i:hover{color: #666}
+.j-sign-body>div.active{border: 1px solid #00a984}
+.j-sign-body>div.error{border: 1px solid #ff0000}
+.j-sign-body>div.active>span{color:#00a984}
+.j-sign-body>span{display: block;overflow: hidden;text-align: left;height: 20px;margin-top: 10px;line-height: 20px;width: 100%;color: #ff0000;font-size: 14px;float: left}
+.j-sign-body>button{float:left;margin:10px 0 20px 0;display: block;width: 100%;height: 40px;font-size: 16px;color: #fff;background:#00b38a;border: none;cursor: pointer}
+.j-sign-body>button:hover{background: #00a984}
+
+header{width: 100%;min-width: 1200px;}
+.j-header-user{width:100%;height: 30px;background: #333;color:#fff}
+.j-header-user>div{min-width: 1200px;max-width: 1380px;margin: 0 auto}
+.j-header-user>div>ul{float: right;list-style: none;margin-top: 7px;height: 15px;}
+.j-header-user>div>ul>li{position:relative;opacity: .8;float:right;color:#c3c3c3;font-size: 14px;line-height: 15px;text-align: center;width: auto;border-left: 1px solid #5d5d5d;cursor: pointer}
+.j-header-user>div>ul>li.j-user-drop{min-width:75px;}
+.j-header-user>div>ul>li>p{float: left;display: block;width: auto;height: 15px;padding:0 10px;}
+.j-header-user>div>ul>li>i{float: left;margin-right:10px;display: block;width: 15px;height: 15px;font-size: 16px;line-height: 15px;color: #ddd;text-align: center}
+.j-header-user>div>ul>li>div{padding-top:8px;display: none;position: absolute;top: 0;left: 0;width: 100%;background: #333;color: #fff;margin-top: 15px;}
+.j-header-user>div>ul>li>div>a{text-decoration:none;display: block;float:left;text-align: center;width: 100%;height: 30px;line-height:30px;font-size: 14px;box-sizing: border-box;color: #fff;opacity: .8}
+.j-header-user>div>ul>li>div>a:hover{opacity: 1}
+.j-header-user>div>ul>li:hover{opacity: 1}
+.j-header-user>div>ul>li:hover div{display: block}
+.j-header-con{width: 100%;min-width: 1200px;background: #fafafa;border-bottom:1px solid #e5e5e5}
+.j-header-con>div{width: 1200px;height: 56px;margin: 0 auto}
+.j-logo{width: 230px;height: 100%;color: #00b38a;font-size: 36px;line-height: 46px;text-align: left;float: left}
+.j-header-con>div>ul{margin-left: 50px;float: left;list-style: none}
+.j-header-con>div>ul>li{width: auto;float: left;height: 56px;padding-right: 34px;}
+.j-header-con>div>ul>li>p{padding:0 3px;display: block;width: auto;height: 56px;box-sizing: border-box;font-size: 18px;color:#999;line-height: 56px;cursor: pointer}
+.j-header-con>div>ul>li.active>p,.j-header-con>div>ul>li>p:hover{color: #333;border-bottom: 2px solid #00b38a;}

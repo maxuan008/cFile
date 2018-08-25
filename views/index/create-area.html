@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/index/create-area.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/index/header.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header>
+    <div class="j-header-user">
+        <div>
+            <ul class="j-inner">
+                <li class="j-click-logout"><p></p><i class="j-icon">&#xe8ac</i></li>
+                <li><p>moop</p><i class="j-icon j-user-drop">&#xe5c5</i><div><span>个人中心</span><span>345</span></div>
+                </li>
+                <li>
+                    <p>moop</p>
+                    <i class="j-icon j-user-drop">&#xe5c5</i>
+                    <div></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="j-header-con">
+        <div class="j-header-func">
+            <div class="j-logo">moopa</div>
+            <ul class="j-link">
+                <li class="active">
+                    <p>首页</p>
+                </li>
+                <li>
+                    <p>首页首页</p>
+                </li>
+                <li>
+                    <p>首页首</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+    <div class="j-title">
+        <div>
+            <p>创建课程</p>
+            <ul>
+                <li data-id="1" class="doing"></li>
+                <span data-id="1" class="doing">1<p>选择课程类型</p></span>
+                <li data-id="1" class="doing left"></li>
+                <li data-id="2"></li>
+                <span data-id="2">2<p>填写课程基本信息</p></span>
+                <li data-id="2" class="left"></li>
+                <li data-id="3"></li>
+                <span data-id="3">3<p>选填课程其他信息</p></span>
+                <li data-id="3" class="left"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="j-main">
+        <ul class="j-list">
+            <li data-id="1" class="active">1.选择课程类型</li>
+            <li data-id="2">2.填写课程基本信息</li>
+            <li data-id="3">3.选填课程其他信息</li>
+            <a>返回上一页面</a>
+        </ul>
+        <div class="j-operation">
+            <div data-id="1">
+                <h4>1.选择课程类型</h4>
+                <p>请选择您想要创建的课程类型</p>
+                <div class="j-course-type">
+                    <span data-type="2">
+                        <span class="j-icon">&#xe5ca</span>
+                        <i class="j-icon">&#xe95f</i>
+                        <p>领域式课程</p>
+                    </span>
+                    <span data-type="4">
+                        <span class="j-icon">&#xe5ca</span>
+                        <i class="j-icon">&#xe958</i>
+                        <p>项目式课程</p>
+                    </span>
+                    <span data-type="3">
+                        <span class="j-icon">&#xe5ca</span>
+                        <i class="j-icon">&#xe9e2</i>
+                        <p>任务式课程</p>
+                    </span>
+                    <span data-type="1">
+                        <span class="j-icon">&#xe5ca</span>
+                        <i class="j-icon">&#xe9ce</i>
+                        <p>学科体系课程</p>
+                    </span>
+                </div>
+                <span class="j-icon j-complete-step">&#xe5db</span>
+            </div>
+            <div data-id="2">
+                <h4>2.填写课程基本信息</h4>
+                <p>请填写课程基本信息，以下项目均为必填项目</p>
+                <div class="j-course-input">
+                    <div>
+                        <p>课程名称</p>
+                        <input data-type="coursename" type="text"/>
+                    </div>
+                    <div>
+                        <p>课程图片</p>
+                        <div><img class="j-course-img" src="/img/default/course.png"/><p>更换图片(400*300)</p><form id="img-upload" enctype="multipart/form-data"><input title="点击选择文件" id="j-img-upload" type="file" name="file"></form></div>
+                    </div>
+                    <div>
+                        <p>课程简介</p>
+                        <textarea data-type="des"></textarea>
+                    </div>
+                    <div>
+                        <p>课时</p>
+                        <input data-type="period" type="number"/>
+                    </div>
+                    <div>
+                        <p>教师介绍</p>
+                        <textarea data-type="teacher_introduction"></textarea>
+                    </div>
+                </div>
+                <span class="j-icon j-complete-step">&#xe5db</span>
+            </div>
+            <div data-id="3">
+                <h4>3.选填课程其他信息</h4>
+                <p>请选填课程其他信息，以下项目非必填项目，可选择性跳过</p>
+                <div class="j-course-input">
+                    <div>
+                        <p>工作过程</p>
+                        <textarea data-type="workflow"></textarea>
+                    </div>
+                    <div>
+                        <p>目标</p>
+                        <textarea data-type="target"></textarea>
+                    </div>
+                    <div>
+                        <p>工具</p>
+                        <textarea data-type="tool"></textarea>
+                    </div>
+                    <div>
+                        <p>适用人群</p>
+                        <textarea data-type="for_use_people"></textarea>
+                    </div>
+                    <div>
+                        <p>内容</p>
+                        <textarea data-type="content"></textarea>
+                    </div>
+                    <div>
+                        <p>工作需求</p>
+                        <textarea data-type="jobreq"></textarea>
+                    </div>
+                    <div>
+                        <p>职业资格标准</p>
+                        <textarea data-type="pqs"></textarea>
+                    </div>
+                    <div>
+                        <p>工作方法与组织方式</p>
+                        <textarea data-type="method"></textarea>
+                    </div>
+                </div>
+                <span class="j-icon active j-complete-step">&#xe5ca</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js/lib/jquery.js"></script>
+<script src="/js/lib/public.js"></script>
+<script src="/js/index/header.js"></script>
+<script src="/js/index/create-area.js"></script>
+</html>

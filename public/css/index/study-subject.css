@@ -1,0 +1,93 @@
+header{width: 100%;min-width: 0!important;position: relative;top: 0;z-index: 111}
+.j-header-con{min-width: 1020px!important}
+.j-header-con>ul{float: right;list-style: none;margin-top: 0;height: 40px;}
+.j-header-con>ul>li{float:right;color:#999;font-size: 14px;line-height: 30px;margin: 5px 0;text-align: center;width: auto;border-left: 1px solid #eee;cursor: pointer}
+.j-header-con>ul>li>p{float: left;display: block;width: auto;height: 30px;padding:0 0 0 10px;}
+.j-header-con>ul>li>i{float: left;margin-right:10px;display: block;width: 15px;height: 30px;font-size: 16px;line-height: 30px;color: #999;text-align: center}
+.j-header-con{width: 100%;min-width: 1020px;background: #fff;box-shadow:0 0 2px rgba(0,0,0,.2);display: inline-block}
+.j-header-con>div{width: auto;height: 40px;float: left}
+.j-logo{width: auto;padding-left:10px;height: 100%;color: #00b38a;font-size: 26px;line-height: 36px;text-align: left;float: left}
+.j-header-con>div>ul{margin-left: 50px;float: left;list-style: none}
+.j-header-con>div>ul>li{width: auto;float: left;height: 40px;padding-right: 34px;}
+.j-header-con>div>ul>li>p{padding:0 3px;display: block;width: auto;height: 40px;box-sizing: border-box;font-size: 18px;color:#999;line-height: 40px;cursor: pointer}
+.j-header-con>div>ul>li.active>p,.j-header-con>div>ul>li>p:hover{color: #333;}
+
+
+.j-inner{float: right;list-style: none;margin-top: 7px;height: 15px;}
+.j-inner>li{position:relative;opacity: .8;float:right;color:#c3c3c3;font-size: 14px;line-height: 15px;text-align: center;width: auto;border-left: 1px solid #5d5d5d;cursor: pointer}
+.j-inner>li.j-user-drop{min-width:75px;}
+.j-inner>li>p{float: left;display: block;width: auto;height: 15px;padding:0 0 0 10px;}
+.j-inner>li>i{float: left;margin-right:10px;display: block;width: 15px;height: 15px;font-size: 16px;line-height: 15px;color: #ddd;text-align: center}
+.j-inner>li>div{padding-top:8px;display: none;position: absolute;top: 0;left: 0;width: 100%;background: #fff;color: #fff;margin-top: 30px;}
+.j-inner>li>div>a{text-decoration:none;display: block;float:left;text-align: center;width: 100%;height: 30px;line-height:30px;font-size: 14px;box-sizing: border-box;color: #999;opacity: .8}
+.j-inner>li>div>a:hover{opacity: 1}
+.j-inner>li:hover{opacity: 1}
+.j-inner>li:hover div{display: block}
+
+body{position: relative;width: 100%;overflow-x: hidden;height: 100%;min-width: 1020px;}
+.j-side-bar{position: absolute;right: 0;top: 0;height: 100%;width: 320px;z-index: 2}
+.j-side-tab-con{position:relative;float: right;height: 100%;width: 280px;background: #14191e;box-sizing: border-box;padding-top: 40px;}
+.j-side-tab-con>div{float: right;height: 100%;width: 280px;overflow-y: auto}
+.j-tool-bar{width: 40px;float: right;height: 100%;box-sizing: border-box;padding-top: 113px;}
+.j-tool-bar>span{cursor:pointer;display:block;margin-top:10px;width: 40px;height:40px;background: #363C40}
+.j-tool-bar>span.active,.j-tool-bar>span:hover{background: red}
+.j-tool-bar>span.active>i,.j-tool-bar>span:hover i{color: #fff}
+.j-tool-bar>span.active>p,.j-tool-bar>span:hover p{color: #fff}
+.j-tool-bar>span>i{height: 25px;font-size: 16px;line-height: 25px;text-align: center;display: block;width: 40px;color: #B4BBBF}
+.j-tool-bar>span>p{height: 15px;font-size: 10px;line-height: 8px;color: #B4BBBF;display: block;width: 40px;text-align: center}
+
+.j-course-operation{z-index:1;/*box-shadow:0 0 3px rgba(0,0,0,.3);*/position: relative;top:0;left: 0;width: 100%;padding: 0 290px 0 10px;background: #fff;box-sizing: border-box;height: 70px;min-width: 1020px!important;}
+.j-course-operation>div{float: left;height: 70px;width: 100%;}
+.j-course-operation>div>ul{width:100%;border-bottom:2px solid #eee;list-style: none;float: left;height: 30px;font-size: 14px;left: 0;position: relative}
+.j-course-operation>div>ul>li{line-height:30px;margin-top:2px;float: left;height: 30px;padding: 0 10px;border-bottom: 2px solid #eee;box-sizing: border-box;color: #999;cursor: pointer}
+.j-course-operation>div>ul>li.active,.j-course-operation>div>ul>li:hover{color: #666;border-color: #00b38a}
+.j-course-operation>div>div{text-align:left;font-weight: 400;font-size: 18px;color:#333;line-height: 40px;height: 40px;padding: 0 5px;float: left;width: 100%}
+.j-course-operation>div>div>h4{float: left;display: block;width: auto;font-weight: 400;color: #666;line-height: 40px;height: 40px;}
+.j-course-operation>div>div>i{color:#ddd;float:left;font-size: 14px;display: block;width: 20px;height: 40px;line-height: 40px;text-align: center}
+.j-course-operation>div>div>p{color:#666;float:left;width: auto;font-size: 16px;display: block;height: 36px;line-height: 40px;}
+.j-course-operation>div>i{display: block;width: auto;float: left;height: 25px;font-size: 16px;line-height: 25px;color: #bbb;}
+.j-course-operation>div>p{font-size: 18px;color: #bbb;width: auto;padding: 0 5px;height: 25px;line-height: 25px;display: block;float: left}
+.j-course-operation>span{position:absolute;right:20px;top:0;width: auto;padding: 5px 10px;height: 30px;line-height:18px;border:1px solid #00b38a;margin: 18px 0;float: right;color: #00b38a;cursor: pointer;box-sizing: border-box}
+.j-course-operation>span:hover{background: #00b38a;color: #fff}
+
+.j-course-name{cursor:pointer;font-size: 16px;width: 100%;box-sizing: border-box;padding:0 10px;font-weight: 400;color: #999;display: block;float: left;height: 40px;line-height:40px;border-bottom: 1px solid #333}
+.j-course-name.active,.j-course-name:hover{color: rgba(13, 255, 0, 0.69)}
+.j-tab-list-one{overflow:hidden;position:relative;cursor:pointer;font-size: 14px;width: 100%;box-sizing: border-box;padding:0 30px 0 10px;font-weight: 400;color: #999;display: block;float: left;height: 30px;line-height:30px;}
+.j-tab-list-one.open{background: rgb(32, 40, 48)
+}
+.j-tab-list-one.active,.j-tab-list-one:hover{color:rgba(13, 255, 0, 0.69)}
+.j-tab-list-one>i{display: block;width: 20px;text-align: cen     ter;height: 30px;line-height: 30px;color: #666;position: absolute;right: 0;font-size: 14px;top: 0}
+.j-tab-list-one>i:hover{color: #999}
+.j-tab-list-one[data-level='1']{height: 25px;line-height: 25px;padding-left: 20px;font-size: 12px;}
+.j-tab-list-one[data-level='2']{height: 20px;line-height: 20px;padding-left: 30px;font-size: 12px;}
+
+.j-main{padding-right: 290px;}
+.j-main>div{box-sizing: border-box;width: 100%;padding-left:10px;overflow-y: auto;}
+.j-main>div[data-type="video"]{overflow-y:hidden}
+
+.j-course-info-one{width: 100%;height: auto;padding-bottom: 20px;margin-top: 20px;border-bottom: 1px dashed #ddd;float: left}
+.j-course-info-one>h4{font-weight:400;display: block;width: auto;height: 30px;line-height: 30px;margin-bottom: 20px;font-size: 18px;color: #333}
+.j-course-info-one>h4>span{width: 30px;height: 30px;text-align: left;float: left;font-size: 24px;color: #333}
+.j-course-info-one>p{display: block;width: 100%;height: auto;line-height: 24px;font-size: 14px;padding-left: 30px;color: #666;box-sizing: border-box}
+
+.j-comment-edit{background:#14191e;position:absolute;top:40px;width: 100%;box-sizing: border-box;padding:5px;float: left;height: 95px;border-bottom: 1px solid #333}
+.j-comment-edit>textarea{padding:0 5px;margin:0;outline-color:#999;width: 100%;height: 60px;line-height: 20px;font-size: 14px;color: #bbb;background: transparent;border:1px solid #333;box-sizing: border-box}
+.j-comment-edit>span{display: block;width: 40px;text-align: center;font-size: 12px;border: 0;height: 20px;line-height: 20px;opacity: .8;background: #666;cursor: pointer;color:#ccc;float: right}
+.j-comment-edit>span:hover{opacity: 1}
+.j-comment-list{display: block;height: 100%;padding-top: 100px;overflow-y: auto;width: 100%;box-sizing: border-box;}
+.j-comment-list>p{color: #666;font-size: 14px;display: block;width: 100%;text-align: center;height: 60px;line-height: 60px;}
+.j-comment-list>div{position:relative;padding: 0 5px 5px 5px;box-sizing: border-box;width: 100%;float: left;}
+.j-comment-user{position:absolute;left:5px;top:0;width: 30px;padding-right: 5px;float: left;min-height: 55px;}
+.j-comment-user>img{width: 30px;height: 30px;border-radius: 50%;float: left;}
+.j-comment-user>p{width: 30px;overflow: hidden;font-size: 12px;color: #999;float: left;display: block;height: 20px;line-height: 20px;text-align: center}
+.j-comment-txt{padding-left:35px;width: 100%;min-height: 61px;padding-bottom:5px;box-sizing: border-box;border-bottom: 1px solid #333;float: left;}
+.j-comment-txt>p{min-height:35px;width: 100%;height: auto;word-break: break-all;line-height: 20px;float: left;background: rgba(255,255,255,.3);color:#ccc;font-size: 14px;padding: 2px 4px;box-sizing: border-box;border-radius: 2px;}
+.j-comment-txt>i{display: block;font-size: 12px;height: 20px;line-height: 20px;float: left;color: #999}
+.j-comment-txt>span{color: #999;font-size: 12px;cursor:pointer;float: right;height: 20px;line-height: 20px;}
+.j-comment-txt>span:hover{text-decoration: underline;color:#bbb}
+
+.j-note-edit{background:#14191e;position:absolute;top:40px;width: 100%;box-sizing: border-box;padding:5px;float: left;height: 225px;}
+.j-note-edit>h4{font-weight: 400;font-size: 16px;color: #999;height: 30px;line-height: 30px;padding-left: 0;float: left}
+.j-note-edit>textarea{padding:0 5px;margin:0;outline-color:#999;width: 100%;height: 160px;line-height: 20px;font-size: 14px;color: #bbb;background: transparent;border:1px solid #333;box-sizing: border-box}
+.j-note-edit>span{display: block;width: 40px;text-align: center;font-size: 12px;border: 0;height: 20px;line-height: 20px;opacity: .8;background: #666;cursor: pointer;color:#ccc;float: right}
+.j-note-edit>span:hover{opacity: 1}

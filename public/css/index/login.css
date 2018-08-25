@@ -1,0 +1,39 @@
+body,html{height: 100%;}
+header{position:absolute;top:0;background: #fff;height: 60px;width: 100%;min-width: 1020px;display: inline-block;z-index: 2}
+header>div{width: 1020px;margin: 0 auto;height: 60px}
+header>div>span{opacity:.9;cursor:pointer;margin-right:10px;width: 120px;color: #00b38a;font-size: 40px;line-height: 50px;height: 60px;display: block;float: left;text-align: left}
+header>div>span:hover{opacity: 1}
+header>div>p{display: block;height: 20px;font-size: 20px;line-height: 20px;width: auto;margin: 20px 0;padding:0 10px;border-left: 1px solid #ddd;float: left;color: #333}
+
+.j-main{position:relative;width: 100%;min-width: 1020px;height: 100%;min-height: 600px;background:#ddd}
+.j-main>img{width: 100%;height: 100%;position: absolute;left: 0;top:0;z-index: 1}
+.j-main>div{width: 1020px;margin: 0 auto;height: 100%;z-index: 2;position: relative;padding-top: 60px;box-sizing: border-box}
+
+.j-login{width: 350px;float: right;margin-top:80px;margin-right:40px;background: #fff;box-shadow:  2px 2px 16px rgba(0,0,0,.5);box-sizing: border-box;padding: 40px;}
+.j-login>h4{font-size: 20px;font-weight: 400;color: #333;display: block;width: 100%;height: 50px;line-height: 20px;}
+.j-login>div{position:relative;width: 100%;height: 42px;box-sizing: border-box;float: left;box-sizing: border-box;border: 1px solid #eee;margin-bottom: 20px;}
+.j-login>div.active{border-color: #00b38a}
+.j-login>div>i{display: block;height: 100%;width: 30px;text-align: center;color: #ccc;font-size: 20px;line-height: 40px;position: absolute;left: 0;top:0}
+.j-login>div.active>i{color: #00b38a}
+.j-login>div>span{display: none;cursor:pointer;font-size: 16px;width: 30px;height: 40px;line-height: 40px;color: #bbb;position: absolute;display: block;right: 0;top: 0;text-align: center}
+.j-login>div>span:hover{color: red;
+    animation-name:close;
+    animation-duration:.2s;
+    animation-timing-function:linear;
+    /* Firefox: */
+    -moz-animation-name:close;
+    -moz-animation-duration:.2s;
+    -moz-animation-timing-function:linear;
+    /* Safari and Chrome: */
+    -webkit-animation-name:close;
+    -webkit-animation-duration:.2s;
+    -webkit-animation-timing-function:linear;
+    /* Opera: */
+    -o-animation-name:close;
+    -o-animation-duration:1s;
+    -o-animation-timing-function:linear;}
+.j-login>div>input{background: transparent;outline: none;border: 0;width: 100%;height: 40px;padding: 0 40px;box-sizing: border-box}
+.j-login>button{width: 100%;height: 40px;background: #00b38a;color: #fff;cursor: pointer;float: left;border:0;margin-bottom: 20px;}
+.j-login>p{width: 100%;height: 20px;text-align: right;font-size: 14px;color: #999}
+.j-login>p>span{color: dodgerblue;cursor: pointer;}
+.j-login>p>span:hover{text-decoration: underline}

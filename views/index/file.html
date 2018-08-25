@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/file/index.css" rel="stylesheet" type="text/css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <div class="j-logo">菩提树</div>
+    <ul class="j-apps">
+        <li>控制台</li>
+        <li class="active">网盘</li>
+        <li>分享</li>
+        <li>更多</li>
+    </ul>
+    <span class="j-icon j-logout">&#xe9e0</span>
+    <span class="j-user-info">
+            <img src="/img/userinfoBg.png"/>
+            <p>moop</p>
+    </span>
+</header>
+<div class="j-list">
+    <ul>
+        <li class="j-base-file"><span class="j-icon">&#xe94f</span><p>全部文件</p></li>
+        <li class="j-picture-file"><span class="j-icon"></span><p>图片</p></li>
+        <li class="j-document-file"><span class="j-icon"></span><p>文档</p></li>
+        <li class="j-video-file"><span class="j-icon"></span><p>视频</p></li>
+        <li class="j-music-file"><span class="j-icon"></span><p>音乐</p></li>
+        <li class="j-other-file"><span class="j-icon"></span><p>其他</p></li>
+        <li class="j-my-share"><span class="j-icon">&#xeaac</span><p>我的分享</p></li>
+        <li><span class="j-icon">&#xe9d7</span><p>回收站</p></li>
+    </ul>
+</div>
+<div class="j-main">
+    <div class="j-tool-bar">
+            <span class="j-upload-btn">
+                <span class="j-icon">&#xe95e</span>
+                <p>上传</p>
+                <form id="file-form" enctype="multipart/form-data">
+                    <input title="点击选择文件" id="j-file-upload" type="file" name="myfile">
+                </form>
+            </span>
+        <span class="j-file-btn j-create-folder">
+                <span class="j-icon">&#xe95b</span>
+                <p>新建文件夹</p>
+            </span>
+        <ul class="j-btn-group">
+            <li class="j-top-share">
+                <span class="j-icon">&#xeaac</span>
+                <p>分享</p>
+            </li>
+            <li class="j-top-download">
+                <span class="j-icon">&#xe95d</span>
+                <p>下载</p>
+            </li>
+            <li class="j-top-remove">
+                <span class="j-icon">&#xe9d7</span>
+                <p>删除</p>
+            </li>
+            <li class="j-top-rename">
+                <p>重命名</p>
+            </li>
+        </ul>
+        <span class="j-icon j-file-show-type">&#xe8ef</span>
+        <span class="j-icon j-file-order">&#xe8d5</span>
+        <div class="j-file-search">
+            <input type="text" placeholder="搜索您的文件"/>
+            <span class="j-icon">&#xe8b6</span>
+        </div>
+    </div>
+    <div class="j-file-menu">
+        <ul>
+            <li class="j-return-prev"><span>返回上一级</span></li>
+            <li class="j-path-roads"><span>全部文件</span><i class="j-icon">&#xe315</i><p>新建文件夹</p></li>
+        </ul>
+        <span class="j-totle-number"></span>
+    </div>
+    <div class="j-file-select-all">
+        <ul>
+            <li class="j-title-file-name">
+                <input type="checkbox"/>
+                <p>文件名</p>
+            </li>
+            <li class="j-title-file-size">
+                <p>大小</p>
+            </li>
+            <li class="j-title-file-date">
+                <p>更新日期</p>
+            </li>
+        </ul>
+    </div>
+    <div class="j-file-content"></div>
+</div>
+<div class="j-right-click">
+    <ul>
+        <li class="j-right-share">分享</li>
+        <li class="j-right-download">下载</li>
+        <li class="j-right-rename">重命名</li>
+        <li class="j-right-remove">删除</li>
+    </ul>
+</div>
+</body>
+<script src="/js/lib/jquery.js"></script>
+<script src="/js/lib/public.js"></script>
+<script src="/js/file/index.js"></script>
+</html>

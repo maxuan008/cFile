@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/file/index.css" rel="stylesheet" type="text/css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <div class="j-logo">logoo</div>
+    <ul class="j-apps">
+        <li class="active">网盘</li>
+        <li>分享</li>
+        <li>更多</li>
+    </ul>
+    <span class="j-user-info">
+            <img src="img/userinfoBg.png"/>
+            <p>moop</p>
+        </span>
+</header>
+<div class="j-list">
+    <ul>
+        <li class="active"><span class="j-icon">&#xe9f5</span><p>全部文件</p></li>
+        <li><span class="j-icon"></span><p>图片</p></li>
+        <li><span class="j-icon"></span><p>文档</p></li>
+        <li><span class="j-icon"></span><p>视频</p></li>
+        <li><span class="j-icon"></span><p>种子</p></li>
+        <li><span class="j-icon"></span><p>音乐</p></li>
+        <li><span class="j-icon"></span><p>其他</p></li>
+        <li><span class="j-icon">&#xe80d</span><p>我的分享</p></li>
+        <li><span class="j-icon">&#xea7c</span><p>回收站</p></li>
+    </ul>
+</div>
+<div class="j-main">
+    <div class="j-tool-bar">
+            <span class="j-upload-btn">
+                <span class="j-icon">&#xea31</span>
+                <p>上传</p>
+                <form id="file-form" enctype="multipart/form-data">
+                    <input title="点击选择文件" id="j-file-upload" type="file" name="file">
+                    <!--<input type="submit" name="submit" value="Commit">-->
+                </form>
+            </span>
+        <span class="j-file-btn j-create-folder">
+                <span class="j-icon">&#xe2cc</span>
+                <p>新建文件夹</p>
+            </span>
+        <ul class="j-btn-group">
+            <li class="j-top-share">
+                <span class="j-icon">&#xe80d</span>
+                <p>分享</p>
+            </li>
+            <li class="j-top-download">
+                <span class="j-icon">&#xea30</span>
+                <p>下载</p>
+            </li>
+            <li class="j-top-remove">
+                <span class="j-icon">&#xea7c</span>
+                <p>删除</p>
+            </li>
+            <li class="j-top-rename">
+                <p>重命名</p>
+            </li>
+        </ul>
+        <span class="j-icon j-file-show-type">&#xe1db</span>
+        <span class="j-icon j-file-order">&#xe8d5</span>
+        <div class="j-file-search">
+            <input type="text" placeholder="搜索您的文件"/>
+            <span class="j-icon">&#xe8b6</span>
+        </div>
+    </div>
+    <div class="j-file-menu">
+        <ul>
+            <li class="j-return-prev"><span>返回上一级</span></li>
+            <li class="j-path-roads"><span>全部文件</span><i class="j-icon">&#xe315</i><p>新建文件夹</p></li>
+        </ul>
+        <span class="j-totle-number"></span>
+    </div>
+    <div class="j-file-select-all">
+        <ul>
+            <li class="j-title-file-name">
+                <input type="checkbox"/>
+                <p>文件名</p>
+            </li>
+            <li class="j-title-file-size">
+                <p>大小</p>
+            </li>
+            <li class="j-title-file-date">
+                <p>更新日期</p>
+            </li>
+        </ul>
+    </div>
+    <div class="j-file-content">
+        <!--<ul class="j-one-list">
+            <li class="j-list-file-name">
+                <input type="checkbox"/>
+                <img src="./img/file/file-doc.png"/>
+                <p>文本文档.txt</p>
+            </li>
+            <li class="j-list-file-size">
+                <p>3B</p>
+            </li>
+            <li class="j-list-file-date">
+                <p>2017-4-19 14:37:15</p>
+            </li>
+        </ul>
+        <ul class="j-one-list">
+            <li class="j-list-file-name">
+                <input type="checkbox"/>
+                <img src="./img/file/file-folder.png"/>
+                <p>文件夹</p>
+            </li>
+            <li class="j-list-file-size">
+                <p>-</p>
+            </li>
+            <li class="j-list-file-date">
+                <p>2017-4-19 14:37:15</p>
+            </li>
+        </ul>-->
+    </div>
+</div>
+<div class="j-right-click">
+    <ul>
+        <li class="j-right-share">分享</li>
+        <li class="j-right-download">下载</li>
+        <li class="j-right-rename">重命名</li>
+        <li class="j-right-remove">删除</li>
+    </ul>
+</div>
+</body>
+<script src="./js/lib/jquery.js"></script>
+<script src="./js/lib/public.js"></script>
+<script>
+   $(function(){
+       var  files = [
+           {name : 'B'},
+           {name : '吧'},
+           {name : '2'},
+           {name : 'b'},
+           {name : '啊'},
+           {name : 'A'},
+           {name : 'a'},
+           {name : '1'}
+       ];
+
+       var sortFiles = function(type,from){
+           var i, j,tmp;
+           for(i=files.length;i>0;i--){
+               for(j=0;j<i-1;j++){
+                   if((files[j][type]).localeCompare(files[j+1][type])){
+                       tmp = files[j];
+                       files[j] = files[j+1];
+                       files[j+1] = tmp;
+                   }
+               }
+           }
+           console.log(files);
+       };
+
+       sortFiles('name',true);
+   });
+</script>
+</html>

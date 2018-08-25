@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h4>post</h4>
+    路径<input class="ta" type="text"/>
+    <button onclick="addItem()">添加参数</button>
+    <ul class="a">
+    </ul>
+    <button onclick="sendPost()">发送请求</button>
+    <br/>
+    <h4>文件上传</h4>
+    路径<input class="tb" type="text"/>
+    <button onclick="addItem2()">添加参数</button>
+    <ul class="b">
+    </ul>
+    <form id="file-form" enctype="multipart/form-data">
+        <input title="点击选择文件" id="j-file-upload" type="file" name="file">
+    </form>
+</body>
+<script src="/js/lib/jquery.js"></script>
+<script src="/js/lib/public.js"></script>
+<script>
+    var sendData = {},
+        addItem = function(){
+            var li = document.createElement('li');li.className = 'a';
+            var input1 = document.createElement('input');input1.type = 'text';$(li).append('参数名：').append(input1);
+            var input2 = document.createElement('input');input2.type = 'text';$(li).append('参数值：').append(input2);
+            $('ul.a').prepend(li);
+            $(input1).focus();
+        },
+        addItem2 = function(){
+            var li = document.createElement('li');li.className = 'b';
+            var input1 = document.createElement('input');input1.type = 'text';$(li).append('参数名：').append(input1);
+            var input2 = document.createElement('input');input2.type = 'text';$(li).append('参数值：').append(input2);
+            $('ul.b').prepend(li);
+            $(input1).focus();
+        },
+        sendPost = function(){
+            $('li.a').each(function(){
+                sendData[$(this).find('input').eq(0).val()] = $(this).find('input').eq(1).val();
+            });
+            console.log(sendData);
+            sendMessage('post','',$('input.ta').val(),sendData,function(data){
+                console.dir(data);
+            })
+        };
+
+        var uploadFile = function(callback){
+        var me = this;
+
+        var progressHandler = function(e){
+            console.log(e);
+        };
+
+        var beforeSendHandler = function(){
+            console.log(1);
+        };
+
+        var completeHandler = function(data){
+            console.log(data);
+            callback(true);
+        };
+
+        var errorHandler = function(){
+            callback(false);
+        };
+
+        var formData = new FormData($('form')[0]);
+        var eles = '';
+            $('li.b').each(function(i,a){
+                if(i === 0){
+                    eles += '?';
+                }
+                eles += $(this).find('input').eq(0).val();
+                eles += '=';
+                eles += $(this).find('input').eq(1).val();
+                if(!i === $('li.b').length){
+                    eles += '&';
+                }
+            });
+        $.ajax({
+            url: $('input.tb').val()+eles,  //server script to process data
+            type: 'POST',
+            xhr: function() {  // custom xhr
+                myXhr = $.ajaxSettings.xhr();
+                if(myXhr.upload){ // check if upload property exists
+                    myXhr.upload.addEventListener('progress',progressHandler, false); // for handling the progress of the upload
+                }
+                return myXhr;
+            },
+            //Ajax事件
+            beforeSend: beforeSendHandler,
+            success: completeHandler,
+            error: errorHandler,
+            // Form数据
+            data: formData,
+            //Options to tell JQuery not to process data or worry about content-type
+            cache: false,
+            contentType: false,
+            processData: false
+        });
+    };
+
+    $(function(){
+        $('#j-file-upload').change(function(){
+            var me = this;
+            uploadFile(function(){
+                $(me).val('');
+            });
+        });
+    });
+</script>
+</html>

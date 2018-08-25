@@ -1,0 +1,77 @@
+header{width: 100%;height:60px;background: #4e6ba0;z-index: 20;position: relative;min-width: 1180px;}
+header>div{box-sizing:border-box;width: 1180px;padding:0 20px;margin: 0 auto;height: 60px}
+.j-logo{width: 100px;height: 60px;float: left;background: url(//u.baidu.com/ucnavi/asset/navi-2.0/images/logo.png) left 12px no-repeat}
+.j-link{display: block;float: left;margin-left:24px;height:67px;width: auto;}
+.j-link>li,.j-mobile{cursor:pointer;float: left;display: block;width: 82px;height: 67px;margin-left: 32px;color: #fff;font-size: 14px;text-align: center;line-height: 64px;position: static}
+.j-link>li:hover{background-color: #65affa}
+.j-link>li.active{background-color: #65affa}
+.j-mobile{background: url(//u.baidu.com/ucnavi/asset/navi-2.0/images/nav_icon_wide.png) -14px -35px no-repeat;}
+.j-mobile:hover{background-position: -14px 27px;color: #263757}
+.j-mobile>div{width: 84px;height: 92px;background: url(//u.baidu.com/ucnavi/asset/navi-2.0/images/erweima_box.png) left top no-repeat;position: relative;left: 0;top: -20px;display: none;}
+.j-mobile:hover .j-mobile-info{display: block}
+.j-mobile>div>div{margin-top: 14px;width: 100%;height: 74px;display: inline-block;background: url(//u.baidu.com/ucnavi/asset/navi-2.0/images/erweima.png) 6px top no-repeat;}
+.j-inner{width: auto;display: block;float: right;height: 60px}
+.j-inner>li{width: 40px;height: 60px;position: static;display: block;float: right;cursor: pointer;color: #fff;text-align: center;line-height: 60px;font-size: 14px;}
+.j-inner>li:hover{color:#263757}
+.j-inner>li>div{font-size: 12px;width: 368px;height:100px;background: #eaedf3;position: relative;left: -320px;top: 100%;display: none;text-align: left;color: #919baf;line-height: 28px;}
+.j-click-logout{background: url(//u.baidu.com/ucnavi/asset/navi-2.0/images/nav_icon_wide.png) -244px -42px no-repeat;}
+.j-click-logout:hover{background-position: -244px 18px}
+.j-click-server{background: url(//u.baidu.com/ucnavi/asset/navi-2.0/images/nav_icon_wide.png) -194px -42px no-repeat;}
+.j-click-server:hover{background-position: -194px 18px}
+.j-click-server:hover .j-server-info{display: block}
+.j-click-message{background: url(//u.baidu.com/ucnavi/asset/navi-2.0/images/nav_icon_wide.png) -146px -42px no-repeat;}
+.j-click-message:hover{background-position: -146px 18px}
+.j-click-message:hover .j-message-info{display: block}
+.j-click-products{background: url(//u.baidu.com/ucnavi/asset/navi-2.0/images/nav_icon_wide.png) -97px -42px no-repeat;}
+.j-click-products:hover{background-position: -97px 18px}
+.j-click-products:hover .j-products-info{display: block}
+.j-username{text-align: left;position: static;width: auto;height: 60px;float: right;line-height: 64px;font-size: 12px;color: #fff;cursor: pointer;}
+.j-username>span{float:left;display: block;width: 30px;text-align: center;height: 60px;line-height: 60px;font-size: 20px;}
+.j-username>p{display: block;padding: 0 5px;float: left;width: auto;height: 60px;line-height: 60px;}
+.j-username:hover{color: #263757;}
+.j-username:hover .j-personal{display: block}
+.j-personal{width: 100%;height:auto;background: #eaedf3;position: relative;left: 0;top:100%;display: none;margin: 0;}
+.j-personal>a{font-size: 14px;display: block;text-decoration: none;width: 100%;height: 40px;line-height: 40px;text-align: center;color: #919baf;position: absolute;background: #eaedf3}
+
+.j-main{background: #e5e6e7;width: 100%;min-width:1180px;display: block;margin:0;margin-top:-7px;padding: 0 0 20px 0;position: relative;float: left;text-align: center}
+.j-up-block{width: 100%;min-width:1180px;height: 165px;padding: 20px 0;background: url('../../img/userinfoBg.png') 50% 50%;}
+.j-up-block>div{width:1180px;box-sizing:border-box;padding:10px 0;height: 165px;margin: 0 auto;}
+.j-user-info{width: 250px;height: 100%;float: left;text-align: left}
+.j-user-info>h4{font-weight: 700;font-size: 12px;color: #fff;height: 20px;margin: 0;line-height: 20px}
+.j-user-info>span{display: block;width: 100%;height: 20px;line-height: 20px;color: #fff;font-size: 12px;margin:10px 0 20px 0;}
+.j-user-info>span>p{margin: 0;display: inline-block;height: 100%;width: auto;margin-right: 48px;cursor: pointer}
+.j-user-info>span>p:hover{text-decoration: underline}
+.j-user-info-more{width: 520px;height: 75px;padding-right: 60px}
+.j-user-info-more>div{width: 250px;height: 75px;line-height: 70px;font-size: 22px;color: #fff;float: left}
+.j-tools-contain>span{display: block;width:70px;height:70px;padding: 0;margin-left:20px;border-radius: 50%;float: left;margin-bottom: 20px;text-align: center;font-size: 12px;line-height: 70px;color: #fff}
+.j-tools-contain{width: 630px;float: left;height: 100%}
+.j-user-info-budget{background: #23D9B5;margin-left: 0}
+.j-user-info-recharge{background: #FFAB1A;}
+.j-recommend{margin-left: 20px;width: 280px;float: right;display: block;height: 100%}
+.j-recommend-1{width: 280px;height: 143px;float: left;background: url('https://ucimg3.baidu.com/img/uckehu?df126dac316300326076.jpg')}
+.j-recommend-2{width: 272px;height: 143px;float: left;margin-left: 8px}
+.j-recommend-2-1{width: 100%;height: 43px;background: #65affa;color: #fff;line-height: 43px;text-align: center;font-size: 14px;cursor: pointer}
+.j-recommend-2-1:hover{background: #569dfa}
+.j-recommend-2-2{width: 100%;height: 92px;margin-top: 8px;background: rgba(255,255,255,.2)}
+
+/*登录注册*/
+.j-sign-box{box-sizing:border-box;display:none;position: fixed;width: 380px;left: 50%;top:50%;margin-left: -190px;margin-top: -130px;z-index: 101;background: #fff;padding:0 20px;}
+.j-sign-header{display: block;height: 50px;width: 100%;float: left;box-sizing:border-box;border-bottom: 1px solid #dfdfdf}
+.j-sign-header>div{font-weight: 400;width: 60px;height: 49px;line-height:49px;float: left;font-size: 18px;text-align: center;color: #787d82;cursor: pointer;}
+.j-sign-header>span{width: 20px;display: block;height: 49px;line-height: 49px;color: #ccc;font-size: 18px;float: right;cursor: pointer;text-align: center}
+.j-sign-header>span:hover{color: red}
+.j-sign-header>div:hover{color: rgba(0,0,0,.5)}
+.j-sign-header>div.active,.j-sign-header>div.active:hover{color:#0a68b6;cursor: default;border-bottom: 1px solid #0a68b6}
+.j-sign-body>div{margin-top:20px;width: 100%;height: 40px;box-sizing: border-box;border: 1px solid #dfdfdf;float: left}
+.j-sign-body>div>span{display:block;float:left;width: 40px;height: 38px;line-height: 38px;font-size: 20px;text-align: center;color: #bbb;font-weight: bold}
+.j-sign-body>div>input{opacity:.7;color:#000;width: 260px;height: 36px;border: none;outline:none;font-size: 14px;line-height: 38px;float: left;display: block}
+.j-sign-body>div>i{cursor:pointer;display: block;width: 20px;height: 20px;text-align: center;line-height: 20px;margin: 9px;color: #bbb;border-radius: 50%;float: left;font-size: 14px}
+.j-sign-body>div>i:hover{color: #666}
+.j-sign-body>div.active{border: 1px solid #0a68b6}
+.j-sign-body>div.error{border: 1px solid #ff0000}
+.j-sign-body>div.active>span{color:#0a68b6}
+.j-sign-body>span{display: block;overflow: hidden;text-align: left;height: 20px;margin-top: 10px;line-height: 20px;width: 100%;color: #ff0000;font-size: 14px;float: left}
+.j-sign-body>button{float:left;margin:10px 0 20px 0;display: block;width: 100%;height: 40px;font-size: 16px;color: #fff;background:#3f89ec;border: none;cursor: pointer}
+.j-sign-body>button:hover{background: #4490f7}
+
+footer{width: 100%;height:90px;background: #5f6675;display: block;float: left;min-width: 1180px}

@@ -1,0 +1,60 @@
+.j-title{display: block;width: 100%;min-width: 1200px;height:auto;background:url("../../img/course-bg.jpg") center no-repeat}
+.j-title>div{display: block;width: 1200px;margin:0 auto;height: 100px;padding: 20px 0 30px 0;}
+.j-title>div>p{margin-left:0;display: block;width: 620px;float: left;height: 50px;font-size: 30px;color: #fff;line-height: 100px;}
+.j-title>div>span{width: auto;height: 16px;line-height:16px;margin-top: 18px;border-radius: 4px;border: 1px solid #00b38a;color: #00b38a;font-size: 16px;float: left;margin-left:20px;display: block;padding: 5px 10px 5px 5px;cursor: pointer}
+.j-title>div>span:hover{color: #fff;background: #00b38a}
+
+.j-main{width: 1200px;margin: 30px auto;height: auto}
+
+.j-tab{width:100%;height:40px;box-sizing: border-box;border-bottom: 2px solid #ccc;margin-bottom: 15px;}
+.j-tab>p{background:transparent;position:relative;width: auto;padding: 0 10px;text-align: center;line-height: 38px;height: 38px;font-size: 16px;color: #bbb;display: block;float: left;cursor: pointer}
+.j-tab>p:hover{color: #999}
+.j-tab>p.active{color: #333}
+.j-tab>p.active:before{content: '';width: 0;height: 0;border-top: 0;border-left: 8px solid transparent;border-right: 8px solid transparent;border-bottom: 4px solid #ccc;position: absolute;left: 50%;bottom:0;margin-left: -8px;}
+.j-info{width: 1200px;box-sizing: border-box;float: left;padding: 0 10px;}
+.j-info[data-index='2']>div{width: 100%;height: auto;padding-bottom: 20px;margin-bottom: 20px;border-bottom: 1px dashed #ddd;float: left}
+.j-info>div>h4{font-weight:400;display: block;width: auto;height: 30px;line-height: 30px;margin-bottom: 20px;font-size: 18px;color: #333}
+.j-info>div>h4>span{width: 30px;height: 30px;text-align: left;float: left;font-size: 24px;color: #333}
+.j-info>div>p{display: block;width: 100%;height: auto;line-height: 24px;font-size: 14px;padding-left: 30px;color: #666;box-sizing: border-box}
+
+.j-list-con{width: 100%;float: left;}
+.j-list-one{width: 275px;margin: 0 10px 5px 10px;height:185px;float: left}
+.j-list-title{height: 30px;float: left;position: relative;background: #eee;width: 100%;}
+.j-list-title>h4{max-width:150px;text-overflow:ellipsis;overflow:hidden;font-size: 14px;font-weight: 400;color: #333;display: block;float: left;height: 30px;line-height: 30px;padding-left: 10px;}
+.j-list-title>span{font-size: 12px;color: #666;float: left;display: block;width: 100px;height: 30px;line-height: 30px;}
+.j-list-title>button.have,.j-list-title>button.active{background: #00b38a;cursor: pointer;}
+.j-list-title>button.have:hover,.j-list-title>button.active:hover{opacity: 1 }
+.j-list-title>button{position: absolute;right: 10px;top:5px;height: 20px;line-height: 20px;font-size: 12px;text-align: center;opacity: .7;padding: 0 10px;border: 0;color: #fff;background: #bbb}
+
+.j-list-body{width: 100%;box-sizing: border-box;border-left: 1px solid #ddd;border-bottom: 1px solid #ddd;border-right: 1px solid #ddd;height: 145px;overflow-y: auto}
+.j-list-user{width: 40px;margin-left: 10px;margin-top: 10px;float: left;}
+.j-list-user>img{display: block;width: 40px;height: 40px;border-radius: 50%;}
+.j-list-user>p{height: 15px;line-height: 15px;font-size: 12px;text-align: center;color: #666;text-overflow: clip;word-break: break-all;overflow: hidden}
+
+.j-list-page{height: 40px;float: left;text-align: center;width: 100%;}
+.j-list-page>span{margin:5px;width: auto;height:30px;box-sizing: border-box;padding: 0 5px;font-size: 14px;color: #999;text-align: center;cursor: pointer}
+.j-list-page>span.active,.j-list-page>span.active:hover{color: #fff;background: #00b38a}
+.j-list-page>span:hover{color:#333}
+
+.j-room-con{width: 100%;}
+.j-room-title{width: 100%;background: #ddd;height: 50px;float: left}
+.j-room-title>h4{padding-left:10px;font-weight: 400;display: block;width: auto;height: 50px;line-height: 50px;font-size: 16px;color: #333;float: left}
+.j-room-title>p{font-size: 14px;color: #999;display: block;float: left;height: 50px;line-height: 50px;}
+.j-room-title>button{margin-right:10px;padding: 0 20px;height: 30px;margin-top: 10px;float: right;background: #bbb;border: 0;color: #fff;font-size: 16px;line-height: 30px;opacity: .7}
+.j-room-title>button.start.active:hover{opacity: 1}
+.j-room-title>button.quit{cursor: pointer;opacity: .8}
+.j-room-title>button.quit:hover{opacity: 1}
+.j-room-title>button.agree{background: #00b38a;cursor: pointer;}
+.j-room-title>button.disagree{cursor: pointer}
+.j-room-title>button.disagree:hover{opacity: .9}
+.j-room-title>button.start.active{background: #00b38a;cursor: pointer;}
+.j-room-body{width: 100%;box-sizing: border-box;border: 1px solid #ddd;float: left}
+.j-room-one{position:relative;width: 176px;margin: 10px;float: left;height: 210px;outline: 1px solid #ddd}
+.j-room-one.me{outline: 1px solid dodgerblue}
+.j-room-leader{display: none;position: absolute;left: 5px;top:5px;color: red;font-size: 30px;height: 24px;width: 24px;text-align: center;line-height: 24px;text-shadow: 0 0 8px #fff}
+.j-room-leader.active,.j-prepare.active{display: block}
+.j-prepare{transform:rotate(-10deg);font-weight:600;display: none;position: absolute;right: 0;bottom: 45px;font-size: 30px;color: #fff;width: 100px;text-align: center;line-height: 20px;height: 20px;box-sizing: border-box;text-shadow: 0 0 5px red}
+.j-room-one>img{width: 100%;height: 176px;display: block;float:left;}
+.j-room-one>p{width: 100%;height: 30px;font-size: 14px;color:#333;text-align: center;line-height: 30px;display: block;float: left}
+
+.j-load-none{width: 100%;text-align: center;color: #999;font-size: 14px;height: 80px;line-height: 80px;}

@@ -1,0 +1,74 @@
+body{background: #f5f5f5;text-align: center;min-width: 600px;padding: 0 10px;box-sizing: border-box;height: auto}
+body>h4{max-width: 1020px;position:relative;text-align: center;font-weight: 400;display: block;color: #333;font-size: 24px;height: 40px;line-height: 40px;margin: 0 auto;margin-top:10px;}
+body>h4>input{background: transparent;width: 100%;height: 40px;line-height: 40px;box-sizing: border-box;border: 0;outline-color: #00b38a;padding: 5px 170px 5px 10px;font-size: 24px;text-align: center}
+body>h4>button{cursor:pointer;width: 160px;height:40px;line-height: 40px;font-size: 16px;color: #fff;background: #00b38a;border: 0;position: absolute;right: 0;top: 0}
+body>div{text-align:left;padding:20px;width: 100%;display:inline-block;max-width: 1020px;position: relative;background: #fff;box-sizing: border-box;border: 1px solid #eee;margin: 10px 0;}
+body>div>h4{display: block;font-weight: 400;width: 100%;box-sizing: border-box;border-left: 4px solid #00b38a;font-size: 16px;padding-left: 5px;}
+body>div>p{padding-left: 10px;font-size: 14px;color: #bbb;display: block;height: 30px;line-height: 30px;width: 100%;}
+body>div>div>p{font-size: 14px;color: #bbb;display: block;height: 30px;line-height: 30px;width: 100%;}
+.j-create-pan{display:none;position: fixed;top:0;left:50%;z-index: 111;margin-top:0;box-shadow: 1px 1px 5px rgba(0,0,0,.3);border-radius: 6px;}
+.j-create-question.published{background: transparent!important;color: #333!important;cursor: default}
+@media (min-width:1020px) {
+    .j-create-pan{margin-left: -511px}
+}
+@media (max-width:1019px) {
+    .j-create-pan{margin-left: -50%}
+}
+
+
+.j-header>table{width: 100%;text-align: center;font-size: 14px;}
+.j-header>table tr{height: 40px;color: #666;}
+.j-header>table td{padding: 0}
+.j-header>table td:first-child{width: 70px;text-align: left;padding-left: 9px;}
+.j-header>table td>span{border-radius:2px;cursor:pointer;width: auto;height: 15px;padding: 5px 10px;line-height: 15px;font-size: 14px;color: #fff;background: #00b38a;}
+.j-header>table td>span:hover{background: #00a984}
+
+.j-create-pan>div{width: 100%;box-sizing: border-box;padding-left: 10px;}
+.j-create-pan>div>div{width: 100%;float: left;position: relative;margin-top: 10px;margin-bottom: 10px;}
+.j-create-pan>div>div>p{height:30px;line-height:30px;width: 80px;font-size: 14px;color: #666;position: absolute;left: 0}
+
+.j-create-pan>div>div>span{margin:2px;padding-right:10px;font-size:14px;position: relative;padding-left: 80px;width: 100%;box-sizing: border-box;float: left;}
+.j-create-pan>div>div>span>textarea{width: 100%;max-width:100%;border-radius:4px;outline-color:#00b38a;border-color:#ddd;height: 52px;line-height: 20px;padding:5px 10px;font-size: 14px;color: #333;box-sizing: border-box;}
+.j-create-pan>div>div>span>input{height: 28px;line-height: 23px;box-sizing: border-box;padding: 0 10px;width: 100%;border:1px solid #ddd;border-radius:4px;outline-color: #00b38a;color: #333}
+.j-create-pan>div>div>span>div>textarea:hover,.j-create-pan>div>div>span>input:hover,.j-create-pan>div>div>span>span>input:hover,.j-create-pan>div>div>span>textarea:hover{border-color: #00b38a}
+.j-create-pan>div>div>span>h4{line-height:30px;position:absolute;left:80px;font-weight: 400;font-size: 14px;color: #666;display: block;width: 30px;text-align: left;float: left;}
+.j-create-pan>div>div>span>p{color:#999;line-height:30px;width: 70px;position: absolute;right: 20px;top: 0;}
+.j-set-as-answer{cursor:pointer;color:#999;line-height:30px;width: 20px;position: absolute;right: 90px;top: 0;}
+.j-set-as-answer.active{color: #00b38a}
+.j-remove-option{cursor:pointer;color:#999;line-height:30px;width: 20px;position: absolute;right: 0;top: 0;}
+.j-remove-option:hover{color: #ff6e95}
+.j-create-pan>div>div>span>span{position:relative;box-sizing:border-box;width: 100%;padding-left: 30px;float: left;padding-right: 105px;}
+.j-create-pan>div>div>span>span>input{height: 28px;line-height: 23px;box-sizing: border-box;padding: 0 10px;width: 100%;border:1px solid #ddd;border-radius:4px;outline-color: #00b38a;color: #333}
+.j-create-pan>div>div>span>a{float: left;width: auto;height: 30px;line-height: 30px;font-size: 14px;color: #00b38a;cursor: pointer;}
+.j-create-pan>div>div>span>h3{display: block;width: 100%;float: left;font-weight: 400}
+.j-create-pan>div>div>span>h3>a{float: left;width: auto;height: 24px;line-height: 24px;font-size: 12px;color: #fff;cursor: pointer;padding: 0 10px;background: #00b38a;border-radius: 4px;}
+.j-create-pan>div>div>span>h3>a:hover{background: #00a984}
+.j-create-pan>div>div>span>a:hover{color: #00a984;text-decoration: underline;}
+.j-create-pan>div>button{cursor:pointer;opacity:.8;width: auto;height: 25px;margin-top: 10px;color: #fff;border-radius: 4px;float: right;margin-right:10px;padding: 0 10px;line-height: 25px;font-size: 14px;border: 0}
+.j-create-pan>div>button:hover{opacity: 1}
+.j-create-pan>div>button.j-complete-edit{background: #00b38a;}
+.j-create-pan>div>button.j-cancel-edit{background: #ff6e95}
+.j-half{width: 50%!important;}
+.j-full-width{width: 100%!important;}
+
+.j-body>div{position:relative;float: left;width: 100%;box-sizing: border-box;margin:10px 0 0 0;padding: 10px;cursor: default;border-radius: 4px;}
+.j-body>div.unpublished{cursor: pointer!important;}
+.j-body>div.unpublished:hover{box-shadow: 0 0 2px rgba(0,0,0,.2)}
+.j-body>div.unpublished:hover button{display: block}
+.j-body>div>div{width: 100%;font-size: 14px;color: #333;line-height: 24px;float: left;box-sizing: border-box}
+.j-body>div>span{float: left;position: relative;margin-top: 5px;}
+@media (min-width:800px) {
+    .j-body>div>span{width: 50%}
+}
+@media (max-width:799px) {
+    .j-body>div>span{width: 100%}
+}
+.j-body>div>span>i{width: 30px;height: 30px;line-height: 30px;float: left;position: absolute;left: 0;color: #666;cursor: pointer;text-align: center}
+.j-body>div>span>i.checked{color: #00b38a}
+.j-body>div>span>p{position: relative;padding-left: 30px;box-sizing: border-box;width: 100%;font-size: 14px;color: #666;line-height: 30px;}
+.j-body>div>button{display:none;position: absolute;right: 0;top: 0;width: 20px;height: 20px;border-bottom-left-radius: 20px;border-top-right-radius:4px;background: #000;opacity:.2;cursor:pointer;color: #fff;border: 0;text-align: right;line-height: 0;}
+.j-body>div>button:hover{background: #ff4d66;opacity: 1}
+.j-body>div>span>span{width: 100%;height: 30px;padding-left: 30px;float: left}
+.j-body>div>span>span>input{position:relative;width: 80%;box-sizing: border-box;border:0;border-bottom: 1px solid #bbb;height: 30px;line-height: 30px;color: #333;font-size: 14px;padding: 0;outline: 0;}
+.j-body>div>span>textarea{box-sizing:border-box;border-radius:4px;padding:5px 10px;width: 100%;height: 60px;line-height: 24px;max-width: 100%;border: 1px solid #ddd;outline-color: #00b38a}
+.j-body>div>span>textarea:hover{border-color: #00b38a}

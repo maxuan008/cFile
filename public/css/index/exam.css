@@ -1,0 +1,35 @@
+.j-body>div{position:relative;float: left;width: 100%;box-sizing: border-box;margin:10px 0 0 0;padding: 10px;border-radius: 4px;}
+/*.j-body>div:hover{box-shadow: 0 0 2px rgba(0,0,0,.2)}*/
+/*.j-body>div:hover button{display: block}*/
+.j-body>div>div{width: 100%;font-size: 14px;color: #333;line-height: 24px;float: left;box-sizing: border-box}
+.j-body>div>span{float: left;position: relative;margin-top: 5px;}
+@media (min-width:800px) {
+    .j-body>div>span{width: 50%}
+}
+@media (max-width:799px) {
+    .j-body>div>span{width: 100%}
+}
+.j-body>div>span>i{cursor:pointer;z-index:111;width: 30px;height: 30px;line-height: 30px;float: left;position: absolute;left: 0;color: #666;text-align: center}
+.j-body>div>span>i.j-p{cursor: default;}
+.j-body>div>span>i.checked{color: #00b38a}
+.j-body>div>span>p{position: relative;padding-left: 30px;box-sizing: border-box;width: 100%;font-size: 14px;color: #666;line-height: 30px;}
+.j-body>div>button{display:none;position: absolute;right: 0;top: 0;width: 20px;height: 20px;border-bottom-left-radius: 20px;border-top-right-radius:4px;background: #000;opacity:.2;cursor:pointer;color: #fff;border: 0;text-align: right;line-height: 0;}
+.j-body>div>button:hover{background: #ff4d66;opacity: 1}
+
+.j-body>div>span>span{width: 100%;height: 30px;padding-left: 30px;float: left}
+.j-body>div>span>span>input{position:relative;width: 80%;box-sizing: border-box;border:0;border-bottom: 1px solid #bbb;height: 30px;line-height: 30px;color: #333;font-size: 14px;padding: 0;outline: 0;}
+.j-body>div>span>textarea{box-sizing:border-box;border-radius:4px;padding:5px 10px;width: 100%;height: 60px;line-height: 24px;max-width: 100%;border: 1px solid #ddd;outline-color: #00b38a}
+.j-body>div>span>textarea:hover{border-color: #00b38a}
+.j-body>button{width: 160px;height: 40px;padding: 0;border: none;background: #00b38a;color: #fff;cursor: pointer;margin-right:-80px;margin-top:20px;position:relative;right:50%;float: right;line-height: 40px;text-align: center;font-size: 16px;}
+.j-body>button:hover{background: #00a984}
+.j-body>button.complete{background: #bbb!important;}
+
+body{background: #f5f5f5;text-align: center;min-width: 600px;padding: 0 10px;box-sizing: border-box;height: auto}
+body>h4{margin-top:10px;text-align: center;font-weight: 400;display: block;color: #333;font-size: 24px;height: 40px;line-height: 40px;}
+.j-body{text-align:left;padding:20px;width: 100%;display:inline-block;max-width: 1020px;position: relative;background: #fff;box-sizing: border-box;border: 1px solid #eee;margin: 10px 0;}
+.j-body>h4{display: block;font-weight: 400;width: 100%;box-sizing: border-box;border-left: 4px solid #00b38a;font-size: 16px;padding-left: 5px;}
+.j-body>p{padding-left: 10px;font-size: 14px;color: #bbb;display: block;height: 30px;line-height: 30px;width: 100%;}
+.j-body>div>p{font-size: 14px;color: #bbb;display: block;height: 30px;line-height: 30px;width: 100%;}
+
+.j-half{width: 50%!important;}
+.j-full-width{width: 100%!important;}

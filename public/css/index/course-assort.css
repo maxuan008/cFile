@@ -1,0 +1,34 @@
+.j-title{display: block;width: 100%;min-width: 1020px;height:auto;background: #efefef}
+.j-title>div{display: block;width: 1020px;margin:0 auto;height: 40px;padding:30px 0 30px 0;}
+.j-title>div>input{width: 560px;box-sizing: border-box;height: 40px;line-height: 20px;padding: 10px;border: none;outline: #00b38a;font-size: 16px;color: #333;margin-right: 30px;float: left}
+.j-title>div>span{width: 146px;height: 40px;line-height: 40px;background: #00b38a;color: #fff;font-size: 16px;text-align: center;cursor: pointer;float: left;}
+.j-title>div>span:hover{background: #00a984}
+
+.j-main{width: 1020px;margin: 30px auto;}
+.j-left{width: 740px;float: left}
+.j-search-bar{width: 100%;display: inline-block;margin-bottom: 20px;border: 1px solid #eee;box-sizing: border-box;background: #f5f5f5}
+.j-search-bar>div{width: 100%;float: left;border-bottom: 1px solid #eee}
+.j-search-bar>div>h4{font-size: 14px;display: block;width: 100px;float: left;height: 45px;line-height: 45px;text-align: right}
+.j-search-bar>div>span{width: 630px;float: left;box-sizing: border-box;padding-left: 10px;}
+.j-search-bar>div>span>p{height: 25px;padding:0 8px;line-height: 25px;float: left;display: block;margin:10px 15px 10px 0;font-size: 14px;color: #333;cursor: pointer;}
+.j-search-bar>div>span>p.active,.j-search-bar>div>span>p:hover{background: #00b38a;color: #fff;}
+
+.j-page{margin-bottom:20px;width: 100%;box-sizing: border-box;border: 1px solid #eee;background: #f5f5f5;height: 45px;padding-left: 10px;}
+.j-page>div{width: auto;height: 43px;float: left;margin-right: 25px;}
+.j-page>div>h4{height: 25px;margin: 9px 0;font-size: 14px;width: auto;display: block;float: left;line-height: 25px;}
+.j-page>div>span{height: 25px;width: auto;margin:9px 5px 9px 0;padding: 0 8px;font-size: 14px;line-height: 25px;color: #333;cursor: pointer;float: left}
+.j-page>div>span:hover,.j-page>div>span.active{background: #00b38a;color: #fff;}
+.j-page-switch{height: 43px;border-left: 1px solid #eee;float: right!important;margin-right: 0!important;}
+.j-page-switch>i{width: 30px;text-align: center;cursor: pointer;color: #ddd;float: left;height: 43px;line-height: 43px;}
+.j-page-switch>p{font-size:14px;display:block;height: 23px;line-height:23px;margin: 9px 0;float: left;color: #666;text-align: center}
+.j-current-page{width: 20px;color: #00b38a!important;}
+.j-total-page{width: 20px;}
+
+.j-course-list{float: left;width: 100%;/*border-top: 30px solid #fafafa*/}
+.j-course-list>div{width: 100%;border: 1px solid #eee;height: 120px;float: left;margin-bottom: 20px;}
+.j-course-list>div>h4{cursor:pointer;display:block;float:left;font-weight: 400;font-size: 16px;height: 30px;width: 60%;line-height: 15px;color: #00b38a;padding:15px 10px 0 10px;box-sizing: border-box;}
+.j-course-list>div>p{cursor:pointer;display:block;float:left;font-weight: 400;font-size: 16px;height: 30px;width: 40%;line-height: 15px;color: #00b38a;padding:15px 10px 0 10px;box-sizing: border-box;}
+.j-course-list>div>h4:hover,.j-course-list>div>p:hover{text-decoration: underline}
+.j-course-list>div>span{float:left;display: block;width: 100%;height: 60px;font-size: 12px;padding: 10px 10px 0 10px;line-height: 25px;color: #999;box-sizing: border-box}
+.j-course-list>div>div{background: #fafafa;width: 100%;height: 30px;float: left;padding: 0 5px;box-sizing: border-box}
+.j-course-list>div>div>p{width: auto;height: 14px;padding:2px 3px;border-radius: 2px;border: 1px solid #ddd;color: #999;font-size: 10px;line-height: 14px;margin: 5px;display: block;float: left}

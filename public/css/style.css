@@ -1,0 +1,201 @@
+html,body{margin: 0;padding: 0;font-family: 'Microsoft YaHei','微软雅黑',Helvetica,Sans-serif;width: 100%;height: 100%;overflow: auto}
+textarea,input{font-family: 'Microsoft YaHei','微软雅黑',Helvetica,Sans-serif;outline-color: #00b38a}
+ul{list-style: none;margin: 0;padding: 0}
+p,h1,h2,h3,h4,h5,h6{margin: 0}
+
+option:hover{color:#00b38a; }
+p::selection{color:#fff;background:#00b38a;}
+p::-moz-selection{color:#fff;background:#00b38a;}
+p::-webkit-selection{color:#fff;background:#00b38a;}
+li::selection{color:#fff;background:#00b38a;}
+li::-moz-selection{color:#fff;background:#00b38a;}
+li::-webkit-selection{color:#fff;background:#00b38a;}
+h2::selection{color:#fff;background:#00b38a;}
+h2::-moz-selection{color:#fff;background:#00b38a;}
+h2::-webkit-selection{color:#fff;background:#00b38a;}
+h4::selection{color:#fff;background:#00b38a;}
+h4::-moz-selection{color:#fff;background:#00b38a;}
+h4::-webkit-selection{color:#fff;background:#00b38a;}
+a::selection{color:#fff;background:#00b38a;}
+a::-moz-selection{color:#fff;background:#00b38a;}
+a::-webkit-selection{color:#fff;background:#00b38a;}
+div::selection{color:#fff;background:#00b38a;}
+div::-moz-selection{color:#fff;background:#00b38a;}
+div::-webkit-selection{color:#fff;background:#00b38a;}
+span::selection{color:#fff;background:#00b38a;}
+span::-moz-selection{color:#fff;background:#00b38a;}
+span::-webkit-selection{color:#fff;background:#00b38a;}
+input::selection{color:#fff;background:#00b38a;}
+input::-moz-selection{color:#fff;background:#00b38a;}
+input::-webkit-selection{color:#fff;background:#00b38a;}
+option::selection{color:#fff;background:#00b38a;}
+option::-moz-selection{color:#fff;background:#00b38a;}
+option::-webkit-selection{color:#fff;background:#00b38a;}
+textarea::selection{color:#fff;background:#00b38a;}
+textarea::-moz-selection{color:#fff;background:#00b38a;}
+textarea::-webkit-selection{color:#fff;background:#00b38a;}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?4jfe8z');
+    src:  url('../fonts/icomoon.eot?4jfe8z#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?4jfe8z') format('truetype'),
+    url('../fonts/icomoon.woff?4jfe8z') format('woff'),
+    url('../fonts/icomoon.svg?4jfe8z#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="j-icon"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.j-block-12{margin-top:25px;width: 1180px;background: #fff;float: left}
+.j-block-6{margin-top:25px;width: 580px;background: #fff;float: left}
+.j-block-4{margin-top:25px;width: 380px;background: #fff;float: left}
+.j-block-3{margin-top:25px;width: 280px;background: #fff;float: left}
+.j-block-2{margin-top:25px;width: 180px;background: #fff;float: left}
+.j-block-1{margin-top:25px;width: 80px;background: #fff;float: left}
+.j-block-9{margin-top:25px;width: 880px;background: #fff;float: left}
+.j-block-10{margin-top:25px;width: 980px;background: #fff;float: left}
+.j-block-r{margin-left: 20px}
+
+.j-nav-back{position: fixed;width: 100%;height: 100%;background: rgba(0,0,0,.5);z-index: 100;top:0;cursor: pointer;display: none}
+
+.j-loading{color:#999;font-size:16px;width: 30px;height: 30px;margin: 0 auto;text-align: center;line-height: 30px;display:block;margin-top: 30px;
+    animation-name:loading;
+    animation-duration:1s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    animation-play-state:running;
+    /* Firefox: */
+    -moz-animation-name:loading;
+    -moz-animation-duration:1s;
+    -moz-animation-timing-function:linear;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-play-state:running;
+    /* Safari and Chrome: */
+    -webkit-animation-name:loading;
+    -webkit-animation-duration:1s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-play-state:running;
+    /* Opera: */
+    -o-animation-name:loading;
+    -o-animation-duration:1s;
+    -o-animation-timing-function:linear;
+    -o-animation-iteration-count:infinite;
+    -o-animation-play-state:running;
+}
+
+@keyframes loading
+{
+    0%   {transform:rotate(0deg)}
+    25%  {transform:rotate(90deg)}
+    50%  {transform:rotate(180deg)}
+    75%  {transform:rotate(270deg)}
+    100% {transform:rotate(360deg)}
+}
+
+@-moz-keyframes loading /* Firefox */
+{
+    0%   {transform:rotate(0deg)}
+    25%  {transform:rotate(90deg)}
+    50%  {transform:rotate(180deg)}
+    75%  {transform:rotate(270deg)}
+    100% {transform:rotate(360deg)}
+}
+
+@-webkit-keyframes loading /* Safari and Chrome */
+{
+    0%   {transform:rotate(0deg)}
+    25%  {transform:rotate(90deg)}
+    50%  {transform:rotate(180deg)}
+    75%  {transform:rotate(270deg)}
+    100% {transform:rotate(360deg)}
+}
+
+@-o-keyframes loading /* Opera */
+{
+    0% {transform: rotate(0deg)}
+    25% {transform: rotate(90deg)}
+    50% {transform: rotate(180deg)}
+    75% {transform: rotate(270deg)}
+    100% {transform: rotate(360deg)}
+}
+
+@keyframes close
+{
+    0% {transform: rotate(0deg)}
+    25% {transform: rotate(22.5deg)}
+    50% {transform: rotate(45deg)}
+    75% {transform: rotate(67.5deg)}
+    100% {transform: rotate(90deg)}
+}
+
+@-moz-keyframes close /* Firefox */
+{
+    0% {transform: rotate(0deg)}
+    25% {transform: rotate(22.5deg)}
+    50% {transform: rotate(45deg)}
+    75% {transform: rotate(67.5deg)}
+    100% {transform: rotate(90deg)}
+}
+
+@-webkit-keyframes close /* Safari and Chrome */
+{
+    0% {transform: rotate(0deg)}
+    25% {transform: rotate(22.5deg)}
+    50% {transform: rotate(45deg)}
+    75% {transform: rotate(67.5deg)}
+    100% {transform: rotate(90deg)}
+}
+
+@-o-keyframes close /* Opera */
+{
+    0% {transform: rotate(0deg)}
+    25% {transform: rotate(22.5deg)}
+    50% {transform: rotate(45deg)}
+    75% {transform: rotate(67.5deg)}
+    100% {transform: rotate(90deg)}
+}
+
+.j-alert-bg{position: fixed;width: 100%;height: 100%;background: rgba(0,0,0,.3);z-index: 11111;top: 0;left: 0;cursor: pointer}
+.j-alert{position: fixed;width: 440px;left: 50%;margin-left: -220px;top:140px;background: #fff;z-index: 11112}
+.j-alert-header{height: 40px;position: relative;float: left;width: 100%;}
+.j-alert-header>h4{text-align:center;font-weight: 400;display: block;width: 100%;height: 40px;line-height: 40px;float: left;color: #333;font-size: 18px;}
+.j-alert-header>span{line-height:30px;text-align:center;cursor: pointer;color: #bbb;font-size: 20px;width: 30px;height: 30px;margin: 5px;position: absolute;right: 0;top:0;display: block}
+.j-alert-header>span:hover{color: red;
+    animation-name:close;
+    animation-duration:.2s;
+    animation-timing-function:linear;
+    /* Firefox: */
+    -moz-animation-name:close;
+    -moz-animation-duration:.2s;
+    -moz-animation-timing-function:linear;
+    /* Safari and Chrome: */
+    -webkit-animation-name:close;
+    -webkit-animation-duration:.2s;
+    -webkit-animation-timing-function:linear;
+    /* Opera: */
+    -o-animation-name:close;
+    -o-animation-duration:1s;
+    -o-animation-timing-function:linear;}
+.j-alert-body{height: 50px;position: relative;float: left;width: 100%;}
+.j-alert-body>i{width: 40px;margin-left: 20px;font-size: 40px;line-height: 50px;display: block;float: left}
+.j-alert-body>p{width: 380px;box-sizing: border-box;padding:0 20px;font-size: 14px;color: #666;line-height: 50px;float: left;text-align: left}
+.j-alert-footer{height: 45px;position: relative;float: left;width: 100%;}
+.j-alert-footer>button{cursor:pointer;opacity:.85;border:0;color:#fff;margin-top:10px;width: 80px;height: 25px;margin-bottom: 10px;float: right;margin-right: 15px;}
+.j-alert-footer>button:hover{opacity: 1}
+.j-alert-footer>button.no{background: #bbb}
+.j-alert-footer>button.yes{background: #00b38a}

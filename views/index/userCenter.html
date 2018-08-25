@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/index/user-center.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/index/header.css" rel="stylesheet" type="text/css"/>
+    <title></title>
+</head>
+<body>
+<header>
+    <div class="j-header-user">
+        <div>
+            <ul class="j-inner">
+                <li class="j-click-logout"><p></p><i class="j-icon">&#xe8ac</i></li>
+                <li><p>moop</p><i class="j-icon j-user-drop">&#xe5c5</i><div><span>个人中心</span><span>345</span></div>
+                </li>
+                <li>
+                    <p>moop</p>
+                    <i class="j-icon j-user-drop">&#xe5c5</i>
+                    <div></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="j-header-con">
+        <div class="j-header-func">
+            <div class="j-logo">moopa</div>
+            <ul class="j-link">
+
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="j-main">
+    <div class="j-list j-block-2">
+            <span>
+                <img class="j-touxiang-img" src="./img/default/touxiang.png"/>
+                <span>
+                    上传头像
+                    <form id="touxiang-upload" enctype="multipart/form-data">
+                        <input title="点击选择文件" id="j-touxiang-upload" type="file" name="file">
+                    </form>
+                </span>
+            </span>
+        <div style="height: 240px">
+        </div>
+    </div>
+    <div class="j-row j-block-r j-block-10">
+        <div id="row-user-info">
+            <h4>个人信息</h4>
+            <div>
+                <p>姓名</p>
+                <input id="fullname" type="text"/>
+            </div>
+            <div>
+                <p>邮箱</p>
+                <input id="email" type="text"/>
+            </div>
+            <div>
+                <p>修改密码</p>
+                <input id="password" type="password"/>
+            </div>
+        </div>
+        <div id="row-org-info">
+            <h4>组织信息</h4>
+            <div>
+                <p>默认角色</p>
+                <select id="default-role"></select>
+                <h4>没有您所在的机构？<a id="add-org-btn">申请加入</a></h4>
+            </div>
+            <span class="j-add-org">
+                <p>申请加入一个机构</p>
+                <div>
+                    <p>选择所在组织</p>
+                    <select id="select-org">
+                        <option value="">—请选择—</option>
+                    </select>
+                </div>
+                <div>
+                    <p>选择所在机构</p>
+                    <select id="select-dept">
+                        <option value="">—请先选择组织—</option>
+                    </select>
+                    <div id="j-dept-select"></div>
+                </div>
+                <div>
+                    <p>选择您的角色</p>
+                    <select id="select-role">
+                        <option value="">—请先选择组织—</option>
+                    </select>
+                </div>
+                <button>提交</button>
+            </span>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/js/lib/jquery.js"></script>
+<script src="/js/lib/public.js"></script>
+<script src="/js/index/header.js"></script>
+<script src="/js/index/userCenter.js"></script>
+</html>

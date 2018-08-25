@@ -1,0 +1,298 @@
+@media (min-width: 1400px) {
+    header,.j-main{width: 100%;}
+    header>div,.j-main>div{width: 1400px;}
+    .j-add-user{width: 860px;}
+}
+@media (min-width: 1200px) and (max-width: 1400px){
+    header,.j-main{width: 100%;}
+    header>div,.j-main>div{width: 100%;}
+    .j-add-user{width: 100%;padding-left: 262px;position: static;margin-top:-50%;left: 0;top:0;float: none;box-sizing: border-box;padding-right: 30px;z-index: -11}
+}
+@media (max-width: 1200px){
+    header,.j-main{width: 1200px;}
+    header>div,.j-main>div{width: 1200px;}
+    .j-add-user{width: 660px;}
+}
+
+header{height:60px;background: #fff;z-index: 20;position: relative;}
+header>div{box-sizing:border-box;padding:0 20px;margin: 0 auto;height: 60px}
+.j-logo{width: auto;height: 30px;float: left;margin-top: 15px;padding-right: 20px;border-right: 1px solid #ccc;font-size: 24px;line-height: 30px;}
+.j-link{display: block;float: left;height:67px;width: auto;}
+.j-link>li,.j-mobile{cursor:pointer;float: left;display: block;width: auto;height: 60px;margin-left: 40px;color: #333;font-size: 18px;text-align: center;line-height: 60px;position: static}
+.j-link>li:hover{color: #00b38a}
+.j-link>li.active{color: #00b38a}
+.j-mobile{background: url(//u.baidu.com/ucnavi/asset/navi-2.0/images/nav_icon_wide.png) -14px -35px no-repeat;}
+.j-mobile:hover{background-position: -14px 27px;color: #263757}
+.j-mobile>div{width: 84px;height: 92px;background: url(//u.baidu.com/ucnavi/asset/navi-2.0/images/erweima_box.png) left top no-repeat;position: relative;left: 0;top: -20px;display: none;}
+.j-mobile:hover .j-mobile-info{display: block}
+.j-mobile>div>div{margin-top: 14px;width: 100%;height: 74px;display: inline-block;background: url(//u.baidu.com/ucnavi/asset/navi-2.0/images/erweima.png) 6px top no-repeat;}
+.j-inner{width: auto;display: block;float: right;height: 60px}
+.j-inner>li{width: 40px;height: 60px;position: static;display: block;float: right;cursor: pointer;color: #333;text-align: center;line-height: 60px;font-size: 20px;}
+.j-inner>li>div{font-size: 12px;width: 368px;height:100px;background: #eaedf3;position: relative;left: -320px;top: 100%;display: none;text-align: left;color: #919baf;line-height: 28px;}
+.j-click-logout{color:#333;}
+.j-click-logout:hover{color:#00b38a}
+.j-click-server{background: url(//u.baidu.com/ucnavi/asset/navi-2.0/images/nav_icon_wide.png) -194px -42px no-repeat;}
+.j-click-server:hover{background-position: -194px 18px}
+.j-click-server:hover .j-server-info{display: block}
+.j-click-message{background: url(//u.baidu.com/ucnavi/asset/navi-2.0/images/nav_icon_wide.png) -146px -42px no-repeat;}
+.j-click-message:hover{background-position: -146px 18px}
+.j-click-message:hover .j-message-info{display: block}
+.j-click-products{background: url(//u.baidu.com/ucnavi/asset/navi-2.0/images/nav_icon_wide.png) -97px -42px no-repeat;}
+.j-click-products:hover{background-position: -97px 18px}
+.j-click-products:hover .j-products-info{display: block}
+.j-username{width: auto;min-width:80px;height: 60px;float: right;padding:0 10px;text-align: center;line-height: 60px;font-size: 12px;color: #333;cursor: pointer;}
+.j-username:hover{color: #00b38a;}
+.j-username:hover .j-personal{display: block}
+.j-change-dept-user{width: auto;height: 60px;float: right;padding:0 10px;text-align: left;line-height: 60px;font-size: 12px;color: #333;cursor: pointer;position: static}
+.j-change-dept-user:hover{color: #00b38a;}
+.j-change-dept-user:hover .j-dept-user-select{display: block}
+.j-personal,.j-dept-user-select{outline-color:#00b38a;width: 100%;background: #eee;position: relative;left: 0;top:0;display: none;margin: 0;box-shadow:0 1px 1px rgba(0,0,0,.2)}
+.j-personal>a,.j-dept-user-select>a{padding:0;font-size: 12px;display: block;text-decoration: none;width: 100%;height: 30px;line-height: 30px;text-align: center;color: #333;position: relative;background: #eee}
+.j-personal>a:hover,.j-dept-user-select>a:hover{background: #00b38a;color:#fff}
+
+.j-main{background: #e5e6e7;display: block;margin:0;margin-top:-7px;padding: 0 0 20px 0;position: relative;float: left;text-align: center}
+
+.j-products{display: flex;box-sizing:border-box;padding: 0;margin: 0 auto;height: 100%;margin-top: 20px;background: #fff}
+.j-main-list{background: #fff;height: 100%;margin-top: 0;box-shadow: none;padding-top: 20px;width: 200px;}
+.j-main-content{box-shadow: none;background:#fff;padding: 20px;box-sizing: border-box;width: 100%;border-left: 2px solid #e5e6e7;margin-top: 0;margin-left: 0;position: relative;top:0}
+.j-main-content>p{/*border-left:4px solid #00a984;*/font-weight:600;padding-left:5px;width: 100%;height: 60px;line-height: 60px;margin: 0;display: block;float: left;font-size: 18px;color: #474747;text-align: left;}
+.j-table,.j-add-col{display: inline-block;text-align: left;float: left;width: 100%;margin:5px 0}
+.j-add-col{box-sizing: border-box;padding: 0 30px;}
+.j-field-con{display: block;width: 50%;padding: 20px 0;margin: 0;height: 30px;float: left;}
+.j-col-add-button{width: 100%;border: none;height: 60px;float: left;padding: 0;margin-bottom: 10px;box-sizing: border-box;border-bottom: 1px solid #dfdfdf}
+.j-col-add-button>span,.j-table>span,.j-add-user>span{padding-left: 10px;height:46px;line-height:46px;color: #ff0000;font-size: 14px}
+.j-col-add-button>button,.j-table>button{float: left;width: 75px;height: 30px;margin-top:10px;background: #00a984;color: #fff;cursor: pointer;border: none;line-height: 30px;font-size: 14px;text-align: center;}
+.j-col-add-button>button:hover,.j-table>button:hover{opacity: .85}
+.j-field-con>p{font-size: 14px;color: #474747;line-height: 30px;display: block;width: 130px;height: 30px;float: left}
+.j-field-con>input{outline-color:#00b38a;width: 160px;height: 26px;padding:0 5px;font-size: 14px;color: #474747;line-height: 20px;float: left;margin-left: 10px;}
+.j-field-con>select{outline-color:#00b38a;width: 174px;height: 30px;padding:0 5px;font-size: 14px;color: #474747;line-height: 30px;float: left;margin-left: 10px;}
+.j-add-user>input,.j-table>input{outline-color:#00b38a;margin: 10px 10px 0 0;width: 150px;padding:0 5px;font-size: 14px;line-height: 16px;height: 21px;color: #474747;outline: none;float: left}
+.j-table>select,.j-add-user>select{outline-color:#00b38a;margin: 10px 10px 0 0;width:164px;padding:0 5px;font-size: 14px;color: #474747;height: 25px;line-height: 20px;outline: none;float: left}
+.j-table table,.j-add-user table{line-height:30px;width: 100%;margin-top: 10px;float: left;border-collapse:collapse;text-align: center;border: 1px solid #ccc;}
+.j-table td,.j-add-user td{padding:0;min-width: 30px;font-size: 14px;border-bottom: 1px solid #ccc;border-right:1px solid #ccc}
+.j-table tr:nth-child(even),.j-add-user tr:nth-child(even){background: rgba(0,0,0,.05)}
+.j-table th,.j-add-user th{color:#474747;font-size: 14px;width: auto;min-width: 30px;height: 60px;line-height: 60px;background: rgba(0,0,0,.1);border-bottom: 1px solid rgba(0,0,0,.1)}
+.j-table td>input,.j-table td>select,.j-add-user td>input,.j-add-user td>select{outline-color:#00b38a;text-align:center;background:transparent;width: 100%;border: 0;height: 50px;line-height: 50px;font-size: 14px;color: #474747;}
+.j-table td>select,.j-add-user td>select{outline-color:#00b38a;padding-left: 10%}
+.j-table td>button,.j-add-user td>button{background: transparent;color: #474747;cursor: pointer;border: none;outline: none}
+.j-table td>button:hover,.j-add-user td>button:hover{color: red}
+.j-table td li,.j-add-user>td li{width: 100%;height: 50px;line-height: 50px;text-align: center;border-bottom: 1px solid #ccc}
+.j-table td li>div,.j-add-user td li>div{display: block;width: 50%;float: left;height: 50px;box-sizing: border-box;padding: 5px;}
+.j-table td li>div>span,.j-add-user td li>div>span{width:40px;height: 40px;font-size: 14px;float: right;cursor: pointer;line-height: 40px;}
+.j-table td li>div>span[data-status='0'],.j-add-user td li>div>span[data-status='0']{color: #777;}
+.j-table td li>div>span[data-status='1'],.j-add-user td li>div>span[data-status='1']{color:#00a984}
+.j-table td li>div>p,.j-add-user td li>div>p{height: 40px;width: 100%;font-size: 14px;color: #474747;line-height: 40px;display: block;margin: 0;float: left;text-align: left}
+
+.j-tree{display: block;width: 260px;height: 500px;float: left;text-align: left;margin-top: 20px;color:#474747;overflow-y: auto;border: 1px solid #ccc;position: relative;z-index: 1}
+.j-tree li{float: left;box-sizing: border-box;height: 30px;width: 100%;margin: 0;}
+.j-tree li.active{background: #dfdfdf}
+.j-tree li>input{outline-color:#00b38a;display: none;height: 26px;border: none;line-height: 30px;text-align: left;font-size: 14px;}
+.j-tree li>i{cursor:pointer;display: block;width: 20px;height: 30px;float: left;line-height: 30px;text-align: center;font-size: 14px;margin: 0;padding: 0}
+.j-tree li>p{cursor : pointer ;display: block;height: 30px;float: left;line-height: 30px;font-size: 14px;}
+.j-tree li>span{width: 20px;height: 30px;margin: 0;padding: 0;float: right;display: none;line-height: 30px;font-size: 14px;text-align: center;cursor: pointer;}
+.j-tree li>span.j-tree-remove:hover{color : #ff3333;}
+.j-tree li>span.j-tree-add:hover{color : #00a984;}
+.j-tree li>span.j-tree-edit:hover{color : #00CC66;}
+.j-tree li:hover span{display: block;}
+.j-tree li:hover{background: #eee}
+.j-tree li[data-level='0']{padding-left: 0;}
+.j-tree li[data-level='1']{padding-left: 20px;}
+.j-tree li[data-level="2"]{padding-left: 40px;}
+.j-tree li[data-level='3']{padding-left: 60px;}
+.j-tree li[data-level='4']{padding-left: 80px;}
+.j-tree li[data-level='5']{padding-left: 100px;}
+.j-tree li[data-level='0']>p{width: 160px;}
+.j-tree li[data-level='1']>p{width: 140px;}
+.j-tree li[data-level="2"]>p{width: 120px;}
+.j-tree li[data-level='3']>p{width: 100px;}
+.j-tree li[data-level='4']>p{width: 80px;}
+.j-tree li[data-level='5']>p{width: 60px;}
+.j-tree li[data-level='0']>input{width: 156px;}
+.j-tree li[data-level='1']>input{width: 136px;}
+.j-tree li[data-level="2"]>input{width: 116px;}
+.j-tree li[data-level='3']>input{width: 96px;}
+.j-tree li[data-level='4']>input{width: 76px;}
+.j-tree li[data-level='5']>input{width: 56px;}
+.j-add-user{margin-left: 20px;height: auto;float: left;padding-top: 20px;text-align: left;}
+
+.j-main-list>ul{display: block;width: 100%;}
+.j-main-list>ul>li{cursor:pointer;float: left;width: 100%;display: block;height: 42px;line-height: 42px;font-size: 14px;color: #333;overflow: hidden;text-overflow: ellipsis;text-align: left}
+.j-main-list>ul>li:hover{background: #eee}
+.j-main-list>ul>li>a{color: #333;text-decoration: none}
+.j-main-list>ul>li>span{width: 42px;float: left;display: block;height: 42px;line-height: 42px;text-align: center;font-size: 14px;}
+.j-main-list>ul>li>p{display: block;width: 154px;height: 42px;float: left}
+.j-main-list>ul>ul{display: block;float: left;width: 100%;background: #fff}
+.j-main-list>ul>ul>li{display: block;width: 140px;height: 42px;float: left;padding: 0 20px 0 40px}
+.j-main-list>ul>ul>li:hover{background: #eee}
+.j-main-list>ul>ul>li>a{text-decoration:none;display: block;width: 100%;height: 42px;line-height: 42px;color: #333;text-align: left;font-size: 14px}
+.j-main-list>ul>ul>li.active>a,.j-main-list>ul>ul>li.active:hover .j-main-list>ul>ul>li.active>a,.j-main-list>ul>li.active>a,.j-main-list>ul>li.active:hover a,.j-main-list>ul>li.active>span,.j-main-list>ul>li.active:hover span{color: #fff}
+.j-main-list>ul>ul>li.active,.j-main-list>ul>ul>li.active:hover,.j-main-list>ul>li.active,.j-main-list>ul>li.active:hover{background: #00a984}
+
+footer{width: 100%;height:90px;background: #5f6675;display: block;float: left;min-width: 1200px}
+
+/*course-manage*/
+
+.j-title{display: block;width: 100%;height:auto;background: #fff}
+.j-title>div{display: block;width: 100%;margin:0 auto;height: 40px;padding:0 0 0 0;}
+.j-title>div>input{border:1px solid #ddd;width: 560px;box-sizing: border-box;height: 30px;line-height: 20px;padding: 5px;outline: #00b38a;font-size: 16px;color: #333;margin-right: 30px;float: left}
+.j-title>div>span{width: 146px;height: 30px;line-height: 30px;background: #00b38a;color: #fff;font-size: 16px;text-align: center;cursor: pointer;float: left;}
+.j-title>div>span:hover{background: #00a984}
+
+.j-page{margin-bottom:20px;width: 100%;box-sizing: border-box;border: 1px solid #eee;background: #f5f5f5;height: 45px;padding-left: 10px;}
+.j-page>div{width: auto;height: 43px;float: left;margin-right: 25px;}
+.j-page>div>h4{height: 25px;margin: 9px 0;font-size: 14px;width: auto;display: block;float: left;line-height: 25px;}
+.j-page>div>span{height: 25px;width: auto;margin:9px 5px 9px 0;padding: 0 8px;font-size: 14px;line-height: 25px;color: #333;cursor: pointer;float: left}
+.j-page>div>span:hover,.j-page>div>span.active{background: #00b38a;color: #fff;}
+.j-page-switch{height: 43px;border-left: 1px solid #eee;float: right!important;margin-right: 0!important;}
+.j-page-switch>i{width: 30px;text-align: center;cursor: pointer;color: #ddd;float: left;height: 43px;line-height: 43px;}
+.j-page-switch>i.active{}
+.j-page-switch>p{font-size:14px;display:block;height: 23px;line-height:23px;margin: 9px 0;float: left;color: #666;text-align: center}
+.j-current-page{width: 20px;color: #00b38a!important;}
+.j-total-page{width: 20px;}
+
+.j-course-list{float: left;width: 100%;/*border-top: 30px solid #fafafa*/text-align: left}
+.j-course-list>p{height: 100px;line-height: 100px;font-size: 14px;color: #666;text-align: center}
+.j-course-list>div{cursor:pointer;position:relative;background:#f7f7f7;width: 23.5%;box-sizing:border-box;border: 1px solid #eee;float: left;margin-bottom: 20px;position: relative;margin-left:2%;opacity:.8}
+.j-course-list>div:hover{opacity:1}
+.j-course-list>div.no-margin{margin-left:0}
+.j-course-list>div>img{width: 100%;height: 160px;float: left;}
+.j-course-list>div>h4{padding:0 5px;line-height:30px;height:30px;box-sizing:border-box;cursor:pointer;display:block;float:left;font-weight: 400;font-size: 16px;width: 100%;color: #00b38a;}
+.j-course-list>div>p{cursor:pointer;display:block;float:left;font-weight: 400;font-size: 16px;height: 30px;width: 40%;line-height: 15px;color: #00b38a;padding:15px 10px 0 10px;box-sizing: border-box;}
+.j-course-list>div>h4:hover,.j-course-list>div>p:hover{text-decoration: underline}
+.j-course-list>div>span{padding:0 5px;float:left;display: block;width: 100%;height: 20px;font-size: 12px;line-height: 20px;color: #999;box-sizing: border-box}
+.j-course-list>div>div{position:absolute;right:0;width: 100%;float: left;box-sizing: border-box;display: block;height:20px;}
+.j-course-list>div>div.publish{bottom:0;}
+.j-course-list>div>div.list{background: #fff;width: 100%;float: left;box-sizing: border-box;display: block;height:auto;padding-left:0}
+.j-course-list>div>div.hide{display: none}
+.j-course-list>div>div>p{width: auto;height: 14px;padding:2px 3px;border-radius: 2px;border: 1px solid #ddd;color: #999;font-size: 10px;line-height: 14px;margin: 5px;display: block;float: left}
+.j-course-list>div>div>span{float:right;height:20px;position:relative;cursor:pointer;width: auto;padding:0;color: #00b38a;font-size: 10px;line-height: 20px;display: block;}
+.j-course-list>div>div>span:hover{}
+.j-course-list>div>div>span>p{display: block;width: auto;margin:0;float: left;font-size: 12px;}
+.j-course-list>div>div>span>i{width: 20px;text-align: center}
+.j-course-list>div>div>span:hover div{display: block}
+.j-course-list>div>div>span>div{display:none;background: #fff;border:1px solid #00b38a;width: 150px;height: auto;position: absolute;left: 100%;top: 0px;z-index:1}
+.j-course-list>div>div>span>div>p{display: block;width: 100%;height: 20px;line-height: 20px;font-size: 12px;color: #bbb;box-sizing: border-box}
+.j-course-list>div>div>span>div>p:hover,.j-course-list>div>div>span>div>p.active{background: #00b38a;color:#fff}
+.j-course-list>div>div>span>div>p[data-level='0']{padding-left: 10px;}
+.j-course-list>div>div>span>div>p[data-level='1']{padding-left: 30px;}
+.j-course-list>div>div>span>div>p[data-level='2']{padding-left: 50px;}
+.j-course-list>div>div>span>div>p[data-level='3']{padding-left: 70px;}
+
+.j-org{width: 100%;height: 50px;float: left}
+.j-org>p{text-align:left;display: block;width: 120px;font-size: 14px;color: #333;height: 50px;line-height: 50px;float: left;margin-right: 20px;}
+.j-org>span{width: 30px;height: 50px;float: left;line-height: 50px;color: #666;font-size: 12px;text-align: center}
+.j-org>input{border: 1px solid #ddd;padding:0 0 0 10px;line-height: 28px;margin-top: 10px;float: left;font-size: 14px;color: #333;width:388px;outline-color: #00b38a}
+.j-org>input[type='number']{width: 80px;}
+.j-org>div{position:relative;cursor:pointer;width: 400px;box-sizing: border-box;border: 1px solid #ddd;height: 30px;float: left;margin-top: 10px;}
+.j-org>div:hover{border: 1px solid #00b38a}
+.j-org>div:hover i{color: #666}
+.j-org>div:hover span{display: block}
+.j-org>div>i{display: block;width: 30px;text-align: center;height: 28px;float: right;line-height: 28px;color: #bbb}
+.j-org>div>p{display: block;width: 368px;box-sizing: border-box;padding-left: 10px;font-size: 14px;line-height: 28px;height: 28px;color: #333;float: left;text-align: left}
+.j-org-select{font-size:14px;color:#333;overflow-y:auto;max-height:320px;display:none;position: absolute;width: 100%;background:#fff;border-left: 1px solid #ddd;border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;top:29px;left: -1px;}
+.j-org-form{display: block;margin-top: 10px;width: 100%;float: left}
+.j-org-submit{margin-top:10px;cursor:pointer;width: 80px;height: 32px;line-height: 32px;text-align: center;font-size: 14px;color: #fff;opacity: .8;background: #00b38a;float: left;margin-left: 140px;border: none}
+.j-org-submit:hover{opacity: 1}
+.j-org-select>p{cursor:pointer;font-size: 14px;color: #333;width: 100%;box-sizing: border-box;text-align: left;display: block;float: left}
+.j-org-select>p:hover{background: rgba(0,0,0,.03)}
+.j-org-select>p.active{background: rgba(0,0,0,.05)}
+.j-org-select[data-name='course']>p[data-index='0']:hover{background: transparent}
+.j-org-select[data-name='course']>p[data-index='0']{cursor: default}
+.j-org-select>p[data-index='0']{height: 30px;line-height: 30px;padding-left: 10px;}
+.j-org-select>p[data-index='1']{height: 25px;line-height: 25px;padding-left: 30px;}
+.j-org-select>p[data-index='2']{height: 25px;line-height: 25px;padding-left: 50px;}
+.j-org-select>p[data-index='3']{height: 25px;line-height: 25px;padding-left: 70px;}
+
+.j-situation-one{width: 100%;height: 30px;}
+.j-situation-one[data-level='0']{background: rgba(0,0,0,.04)}
+.j-situation-one>h4{overflow:hidden;font-weight: 400;font-size: 14px;height:30px;line-height:30px;color: #333;display: block;width: 100%;padding-left: 10px;padding-right:80px;float: left;cursor: pointer;box-sizing:border-box}
+.j-situation-one>h4:hover{text-decoration: underline;color:#00b38a}
+.j-situation-one>button{position:absolute;right:0;margin-right:10px;width: 60px;height: 20px;border: 0;background: #00b38a;opacity: .7;cursor: pointer;line-height: 20px;color: #fff;margin-top: 5px;float: right}
+.j-situation-one>button:hover{opacity: 1}
+.j-course-list>div>div>i{font-size: 14px;color: #00b38a;cursor: pointer;margin-left: 10px;height: 30px;line-height: 30px;}
+.j-course-list>div>div>i:hover{text-decoration: underline}
+.j-course-one>button{outline:none;color: #666;cursor: pointer;width: auto;background: transparent;border: 0;height: 20px;line-height: 20px;}
+.j-course-one>button:hover{color: #00b38a;text-decoration: underline}
+
+.j-record-c{width: 100%;height: 50px;float: left}
+.j-record-c>h4{font-size: 16px;font-weight: 400;width: auto;display: block;float: left;line-height: 50px;}
+
+.j-record{width: 320px;height: 50px;float: left}
+.j-record>p{text-align:left;display: block;width: auto;padding-right:10px;font-size: 14px;color: #333;height: 50px;line-height: 50px;float: left;}
+.j-record>span{width: 30px;height: 50px;float: left;line-height: 50px;color: #666;font-size: 12px;text-align: center}
+.j-record>input{border: 1px solid #ddd;padding:0 0 0 10px;line-height: 28px;margin-top: 10px;float: left;font-size: 14px;color: #333;width:388px;outline-color: #00b38a}
+.j-record>input[type='number']{width: 80px;}
+.j-record>div{position:relative;cursor:pointer;width: 220px;box-sizing: border-box;border: 1px solid #ddd;height: 30px;float: left;margin-top: 10px;}
+.j-record>div:hover{border: 1px solid #00b38a}
+.j-record>div:hover i{color: #666}
+.j-record>div:hover span{display: block}
+.j-record>div>i{display: block;width: 30px;text-align: center;height: 28px;float: right;line-height: 28px;color: #bbb}
+.j-record>div>p{display: block;width: 188px;box-sizing: border-box;padding-left: 10px;font-size: 14px;line-height: 28px;height: 28px;color: #333;float: left;text-align: left}
+.j-record-c>button{display: block;width: 100px;text-align: center;cursor: pointer;border:0;color: #fff;background: #00b38a;opacity: .85;height: 30px;line-height: 30px;float: left;margin-top: 10px;margin-left: 20px;}
+.j-record-c>button:hover{opacity: 1}
+
+.j-record-header{background: #fff;height: 40px;width: 100%;float: left;margin-top: 10px}
+.j-record-header>span{color: #333;box-sizing: border-box;border-left:2px solid #fff;background:rgba(0,0,0,.05);font-size: 14px;width: 20%;display: block;height: 40px;line-height: 40px;text-align: center;float: left}
+.j-record-header>span:first-child{border:0;}
+
+.j-record-body{float: left;width: 100%;}
+.j-record-body>p{display: block;width: 100%;height: 200px;line-height: 200px;font-size: 14px;color: #666;text-align: center}
+.j-record-body>div{width: 100%;display: inline-block}
+.j-record-body>div{cursor: pointer}
+.j-record-body>div:first-child{margin-top: 4px}
+.j-record-body>div:nth-child(odd){background: rgba(0,0,0,.02)}
+.j-record-body>div:nth-child(even){background: rgba(0,0,0,.04)}
+.j-record-body>div:hover{background: rgba(0,0,0,.055)}
+.j-record-body>div.active{background: rgba(0,0,0,.055)}
+.j-record-body>div>span{display:block;float:left;width: 20%;height: 40px;line-height: 40px;font-size: 14px;color: #666;text-align: center}
+.j-record-body>div>span.time{font-size: 12px;}
+.j-record-body>div>span>button{border:none;background: transparent;color: dodgerblue;text-decoration: underline;opacity: .8;cursor: pointer;width: 40px;text-align: center;}
+.j-record-body>div>span>button:hover{opacity: 1}
+.j-record-body>div>div.users{height: 40px;width: 20%;float: left;cursor:pointer}
+.j-record-body>div>div.users>span{display:block;float:left;width: 100%;height: 40px;line-height: 40px;font-size: 14px;color: #666;text-align: center}
+
+.j-record-footer{float: left;width: 100%;text-align: center}
+.j-record-footer>div{display: inline-block;width: auto;height:40px;}
+.j-record-footer>div>p{width: auto;float: left;padding: 0 10px;margin:10px 5px 0 5px;line-height: 30px;cursor: pointer;background: #eee;font-size:14px;color: #666;}
+.j-record-footer>div>p:hover{text-decoration: underline}
+.j-record-footer>div>p.active{background: #00b38a;color: #fff}
+
+.j-record-detail{width: 100%;float: left;text-align: center;display: none;position: relative}
+.j-course-map{background:#fff;width: 100%;text-align: center;box-sizing: border-box;border:2px solid rgba(0,0,0,.055);padding: 20px;cursor: default}
+.j-course-map>div{display: inline-block;position:relative;padding: 10px 40px 30px 40px;text-align: center;background: #00b38a;border-radius: 6px;}
+.j-course-map>span{color:#ccc;font-size: 20px;width: 20px;height: 30px;line-height: 30px;margin: 0 auto;display: block;text-align: center;}
+.j-course-map>div>p{display: block;position:absolute;left:10px;top:0;width: auto;float: left;height: 25px;line-height: 25px;font-size: 14px;color:rgba(255,255,255,.7);}
+.j-course-map>div>span{position:relative;cursor:pointer;background: #fff;color: #00b38a;font-size:14px;line-height:20px;text-align:center;margin:20px 20px 0 20px;width: 20px;height: 20px;border-radius: 50%;float: left;}
+.j-course-map>div>span>div{z-index:100;padding:8px 0;display:none;position:absolute;background: #fff;width:200px;min-height: 40px;border-radius: 6px;box-shadow: 2px 2px 6px rgba(0,0,0,.4);left: 10px;margin-left: -100px;top:26px;}
+.j-course-map>div>span>div:before{content: '';position: absolute;left: 100px;top:0;margin-top:-6px;margin-left: -6px;border-bottom: 6px solid #fff;border-left: 6px solid transparent;border-right:6px solid transparent}
+.j-course-map>div>span:hover div{display: block}
+.j-course-map>div>span>div>p{text-align:left;font-size: 12px;height: 20px;color: #2b79ff;line-height: 20px;width: 100%;overflow:hidden;padding:0 10px;box-sizing: border-box;float: left}
+.j-course-map>div>span>div>p:hover{color: #2b79ff;text-decoration: underline}
+.j-course-map>div>i{margin-top:20px;width: 20px;height: 20px;font-size: 16px;line-height: 20px;text-align: center;color: rgba(255,255,255,.5);float:left}
+.j-course-map>div>i.org{margin-top:50px;}
+
+.j-step-ele{margin:20px 20px 0 20px;float:left;display: inline-block;position:relative;padding: 10px 40px 30px 40px;text-align: center;background: rgba(255,255,255,.5);}
+.j-step-ele>p{display: block;position:absolute;left:10px;top:0;width: auto;float: left;height: 25px;line-height: 25px;font-size: 14px;color:rgba(255,255,255,.8);}
+.j-step-ele>span{position:relative;cursor:pointer;background: #fff;color: #00b38a;font-size:14px;line-height:20px;text-align:center;margin:20px 20px 0 20px;width: 20px;height: 20px;border-radius: 50%;float: left;}
+.j-step-ele>span>div{z-index:100;padding:8px 0;display:none;position:absolute;background: #fff;width:200px;min-height: 40px;border-radius: 6px;box-shadow: 2px 2px 6px rgba(0,0,0,.4);left: 10px;margin-left: -100px;top:26px;}
+.j-step-ele>span>div:before{content: '';position: absolute;left: 100px;top:0;margin-top:-6px;margin-left: -6px;border-bottom: 6px solid #fff;border-left: 6px solid transparent;border-right:6px solid transparent}
+.j-step-ele>span:hover div{display: block}
+.j-step-ele>span>div>p{text-align:left;font-size: 12px;height: 20px;color: #2b79ff;line-height: 20px;width: 100%;overflow:hidden;padding:0 10px;box-sizing: border-box;float: left}
+.j-step-ele>span>div>p:hover{color: #2b79ff;text-decoration: underline}
+
+.j-edit-block{display:none;z-index:101;min-height:300px;position: absolute;margin-bottom:20px;width: 800px;left: 50%;top: 50px;background: #fff;margin-left: -400px;}
+.j-edit-title{width: 100%;height: 40px;padding-top: 4px;padding-left:15px;box-sizing: border-box;background: #00b38a;}
+.j-edit-pan{width: 100%;box-sizing: border-box;padding: 0;margin-bottom: 0}
+.j-edit-pan>div{width: 100%;}
+.j-edit-title>p{display:block;float:left;width: auto;height: 36px;line-height: 30px;font-size: 16px;color: #fff;}
+.j-edit-title>span{float:right;color: #fff;opacity: .6;width: 40px;text-align: center;font-size: 18px;height: 36px;line-height: 30px;cursor: pointer}
+.j-edit-title>span:hover{opacity: .9}
+
+.j-user-select{text-align:left;position: absolute;width: 160px;height: 30px;left: 20px;top: 20px;box-sizing: border-box;border: 1px solid #ddd;}
+.j-user-select>p{box-sizing:border-box;padding:0 10px;display:block;width: 140px;overflow: hidden;line-height: 30px;font-size: 14px;color: #333;height: 30px;float: left}
+.j-user-select>i{float:left;display: block;width: 18px;height: 30px;line-height: 30px;text-align: center;font-size: 14px;color: #999}
+.j-user-select>div{border:1px solid #eee;background:#fff;margin:-1px 0 0 -1px;display:none;position: absolute;left: 0;top: 30px;height: 100px;overflow-y: auto;overflow-x: hidden;width: 100%;}
+.j-user-select>div>p{height: 30px;box-sizing: border-box;padding:0 10px;line-height: 30px;color: #333;float: left;width: 100%;}
+.j-user-select>div>p:hover{background: rgba(0,0,0,.02)}
+.j-user-select>div>p.active{background: rgba(0,0,0,.04)}
+.j-user-select:hover div{display: block}
