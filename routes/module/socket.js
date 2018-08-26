@@ -16,7 +16,7 @@ var roles = {}, rolesRoomSocket = {};
 var studyRooms = {}, talkingRomms = {};
 
 
-var redis = require("redis"), client = redis.createClient({ host: config[mgenv]['redis']['host'], port: 6379, password: config[mgenv]['redis']['password'] });
+var redis = require("redis"), client = redis.createClient({ host: config[mgenv]['redis']['host'], port: config[mgenv]['redis']['port'], password: config[mgenv]['redis']['password'] });
 
 
 var study_Obj = require('./study');

@@ -91,7 +91,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 console.log("-redis 信息, ip: %s , 端口: %s " , config[mgenv]['redis']['host'] ,  config[mgenv]['redis']['port'] );
-var redisConfig = {host:config[mgenv]['redis']['host'],port:config[mgenv]['redis']['port'], password:config[mgenv]['redis']['password'], port:config[mgenv]['redis']['port']  };
+var redisConfig = {host:config[mgenv]['redis']['host'],port:config[mgenv]['redis']['port'], password:config[mgenv]['redis']['password']  };
 
 var client = redis.createClient(redisConfig);
 
