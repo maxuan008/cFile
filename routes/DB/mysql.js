@@ -13,6 +13,7 @@ var connection = mysql.createConnection({
 	  user     : config[mgENV].mysql.user,
 	  password : config[mgENV].mysql.password,
 	  database : config[mgENV].mysql.db,
+	  port:config[mgENV].mysql.port,
 	  connectTimeout: 1000000
 });
 
