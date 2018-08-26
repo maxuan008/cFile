@@ -2,6 +2,7 @@ var express = require('express');
 var config = require("../../config/config.json");
 var fs = require('fs');
 var UUID = require('uuid');
+var moment=require('moment');
 
 var mgenv = global.mgENV;
 var app = express();
@@ -212,7 +213,7 @@ io.on('connection', function (socket) {
                 tel: sessionInfo.userinfo.tel ,
                 headpngpath: sessionInfo.userinfo.headpngpath 
             } ;
-            userinfo_tmp.isAgree = '0'; userinfo_tmp.isleader = leader_Flag; userinfo_tmp.joinTime = new Date();
+            userinfo_tmp.isAgree = '0'; userinfo_tmp.isleader = leader_Flag; userinfo_tmp.joinTime = moment().format('YYYY-MM-DD HH:mm:ss');
             //console.log("userinfo:", sessionInfo.userinfo, userinfo_tmp);
             roomUsers[study_log_id][user_id] = userinfo_tmp; client.set(ROOM_key_redis, JSON.stringify(roomUsers));
 
@@ -334,7 +335,7 @@ io.on('connection', function (socket) {
                 count++;
                 teams[teams.length] = {
                     study_team_id: UUID.v1(), study_log_id: study_log_id, user_id: user_id, fullname: roomUsers[study_log_id][user_id].fullname, account: roomUsers[study_log_id][user_id].account ,headpngpath:roomUsers[study_log_id][user_id].headpngpath  
-                    , isleader: roomUsers[study_log_id][user_id].isleader, study_flow:[], create_time: new Date(), isvalid: '1'
+                    , isleader: roomUsers[study_log_id][user_id].isleader, study_flow:[], create_time: moment().format('YYYY-MM-DD HH:mm:ss'), isvalid: '1'
                 }
             } //for end
 
@@ -787,7 +788,7 @@ io.on('connection', function (socket) {
             if (talkingRomms[study_log_id]['users'][user_id].socketid != socketid ) { socket.emit('join_talking_result', { code: 206, err: "发现您的链接与上次登记簿一致" }); return; }
 
             //存入条天记录，并广播
-            var info = { study_log_id: study_log_id, user_id: user_id, account: sessionInfo.userinfo.account, fullname: sessionInfo.userinfo.fullname, txt: txt, sendTime: new Date() };
+            var info = { study_log_id: study_log_id, user_id: user_id, account: sessionInfo.userinfo.account, fullname: sessionInfo.userinfo.fullname, txt: txt, sendTime: moment().format('YYYY-MM-DD HH:mm:ss') };
             study_Obj.saveTalkingInfo(info, function (err) {
                 if (err) { socket.emit('join_talking_result', { code: 204, err: err }); return; }
                 io.sockets.in(talking_room).emit('talking_broadcast', { datas: info });  //广播
@@ -915,7 +916,7 @@ io.on('connection', function (socket) {
 });     
 
 server.listen(config[mgenv].socketPort, function () {
-    var time = new Date();
+    var time = moment().format('YYYY-MM-DD HH:mm:ss');
     console.log(" Socket启动:  prot:" + config[mgenv].socketPort + ". Listen Succeed at:" + time);
 
 });

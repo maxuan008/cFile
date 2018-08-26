@@ -10,6 +10,8 @@ var UUID = require('uuid');
 //var mongoClient =  require("./mongoClient");
 var syncRequest = require('sync-request');
 
+var moment=require('moment');
+
 var mongoDB =  require("../DB/mongodb");
 
 var mgenv = global.mgENV;
@@ -38,7 +40,7 @@ function question(data) {
 function copy_option_tomy(whereJson_3,callback){
     console.log("==>:实例化选项结合" ,  whereJson_3)
     var returnFlag = 0 , result = [], 
-    data = whereJson_3.data,  myquestiondoc = whereJson_3.myquestiondoc , nowtime = new Date();
+    data = whereJson_3.data,  myquestiondoc = whereJson_3.myquestiondoc , nowtime = moment().format('YYYY-MM-DD HH:mm:ss');
     
     _OPTION.find({question_id:myquestiondoc.question_id, isvalid:'1'}).toArray(function(err,optdocs){ if(err) return callback(err);     
             if(optdocs.length <= 0) return callback(err,result);
@@ -67,7 +69,7 @@ function copy_option_tomy(whereJson_3,callback){
 function copy_question_tomy(whereJson_2,callback){
     console.log("==>:实例化试题结合" ,  whereJson_2)
       var returnFlag = 0 , result = [], 
-      data = whereJson_2.data,  myexamdoc = whereJson_2.myexamdoc , nowtime = new Date();
+      data = whereJson_2.data,  myexamdoc = whereJson_2.myexamdoc , nowtime = moment().format('YYYY-MM-DD HH:mm:ss');
 
       _QUESTION.find({exam_id:myexamdoc.exam_id, isvalid:'1'}).toArray(function(err,quedocs){ if(err) return callback(err);
             if(quedocs.length <= 0) return callback(err,result);
@@ -103,7 +105,7 @@ function copy_question_tomy(whereJson_2,callback){
 
 function copy_exam_tomy( whereJson, callback){  //data为用户信息, exam_id
     console.log("==>:实例化试题组模板" ,  whereJson)
-    var nowtime = new Date(), data = whereJson.data, examdoc = whereJson.examdoc ;
+    var nowtime = moment().format('YYYY-MM-DD HH:mm:ss'), data = whereJson.data, examdoc = whereJson.examdoc ;
     var resultJson = {myexam_id:UUID.v1(), exam_id:examdoc.exam_id , user_id:data.user_id , iscompleted:'0', start_time:nowtime , isvalid:'1' ,creater: data.user_id , create_time:nowtime };
     
     _MY_EXAM.insert(resultJson,function(err,doc){ if(err) return callback(err);
@@ -246,7 +248,7 @@ function fun_update_myoption(data, wherejson,callback){
 }
 
 question.answerquestion = function(data, callback){
-    var whereJson = {myoption_id: data.myoption_id}   , nowtime = new Date();
+    var whereJson = {myoption_id: data.myoption_id}   , nowtime = moment().format('YYYY-MM-DD HH:mm:ss');
     if(data.type != '1' && data.type != '2' && data.type != '3' && data.type != '4' ) return callback("type数据错误");
 
     if(data.type == '1'){ //如果为单选 : 1.先清空所有答案， 2.设置答案
@@ -276,7 +278,7 @@ function fun_update_myexam(data, wherejson,callback){
 }
 
 question.completedexam = function(data, callback){
-    var data_1 ={iscompleted:'1' , end_time : new Date() },  whereJson = { myexam_id : data.myexam_id} ;
+    var data_1 ={iscompleted:'1' , end_time : moment().format('YYYY-MM-DD HH:mm:ss') },  whereJson = { myexam_id : data.myexam_id} ;
     fun_update_myexam(data_1, whereJson, function(err){ return callback(err) });
 }
 
@@ -408,10 +410,10 @@ function fun_addquestion(data,callback){
     _QUESTION.insert(data, function(err,doc){  if(err) return callback(err); 
         if(data.type =='1' || data.type =='2' || data.type =='3' ) {
             var options = [];
-            var tmpjson_1 = {option_id:UUID.v1(), question_id:data.question_id, exam_id:data.exam_id,answertxt:'', isanswer:'0',isvalid:'1' , creater:data.creater, create_time:new Date() };
+            var tmpjson_1 = {option_id:UUID.v1(), question_id:data.question_id, exam_id:data.exam_id,answertxt:'', isanswer:'0',isvalid:'1' , creater:data.creater, create_time:moment().format('YYYY-MM-DD HH:mm:ss') };
             fun_addoption(tmpjson_1,function(err,doc){  if(err) return callback(err);
                 options[options.length] = {option_id:tmpjson_1.option_id};  if(data.type =='3') {result.options = options; return  callback(err,result); }
-                var tmpjson_2 = {option_id:UUID.v1(), question_id:data.question_id, exam_id:data.exam_id, isanswer:'0',isvalid:'1' , creater:data.creater, create_time:new Date() };
+                var tmpjson_2 = {option_id:UUID.v1(), question_id:data.question_id, exam_id:data.exam_id, isanswer:'0',isvalid:'1' , creater:data.creater, create_time:moment().format('YYYY-MM-DD HH:mm:ss') };
                     fun_addoption(tmpjson_2,function(err,doc){  if(err) return callback(err);
                         options[options.length] = {option_id:tmpjson_2.option_id};
                         result.options = options;
@@ -482,17 +484,17 @@ function fun_setanswer(data ,callback){
         if(type != '1' && type != '2' && type != '3' && type != '4' ) return callback("试题类型错误");
         var wherejson = {option_id:data.option_id};
         if(type == '1'){ //单选, 先清空答案，再设置            
-            fun_updateoption({isanswer: '0', update_time: new Date()}, {question_id:data.question_id, isvalid:'1'},function(err){ if(err) callback(err);
-                fun_updateoption({isanswer: data.isanswer, update_time: new Date() }, wherejson,function(err){return callback(err); });  
+            fun_updateoption({isanswer: '0', update_time: moment().format('YYYY-MM-DD HH:mm:ss')}, {question_id:data.question_id, isvalid:'1'},function(err){ if(err) callback(err);
+                fun_updateoption({isanswer: data.isanswer, update_time: moment().format('YYYY-MM-DD HH:mm:ss') }, wherejson,function(err){return callback(err); });  
             });
         }
 
         if(type == '2'){//多选 
-            fun_updateoption({isanswer: data.isanswer , answer_time: new Date() }, wherejson,function(err){ return callback(err);  });
+            fun_updateoption({isanswer: data.isanswer , answer_time: moment().format('YYYY-MM-DD HH:mm:ss') }, wherejson,function(err){ return callback(err);  });
         }
        
         if(type == '3' || type == '4'){//简答和填空
-            fun_updateoption({answertxt: data.answertxt, answer_time: new Date() }, wherejson,function(err){ return callback(err);  });
+            fun_updateoption({answertxt: data.answertxt, answer_time: moment().format('YYYY-MM-DD HH:mm:ss') }, wherejson,function(err){ return callback(err);  });
         }
     });
 }

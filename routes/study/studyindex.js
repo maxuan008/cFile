@@ -181,7 +181,7 @@ function orgcourse_many(req,res,next){
     var course_child_id = req.body.course_child_id , orgtitle =  req.body.orgtitle , 
     deptid = req.body.deptid  , least = req.body.least  , most = req.body.most  ;
 
-    var user_id = req.session.userinfo.user_id , create_time =new Date()  ;
+    var user_id = req.session.userinfo.user_id , create_time =moment().format('YYYY-MM-DD HH:mm:ss')  ;
     
     var parflg = '', data = {};
     if(!course_child_id)  parflg = parflg + " course_child_id";  else data.course_child_id = course_child_id;
@@ -271,7 +271,7 @@ function getstudycourses(req,res,next){
 function beginlearining(req,res,next){
     var course_child_id = req.body.course_child_id  ;
     if(course_child_id == '' || course_child_id == undefined)  return res.send({code:204,err:'course_child_id参数不正确'});
-    var user_id = req.session.userinfo.user_id , create_time =new Date()  ;
+    var user_id = req.session.userinfo.user_id , create_time =moment().format('YYYY-MM-DD HH:mm:ss')  ;
     var data = {study_log_id:UUID.v1(), course_child_id:course_child_id, user_id:user_id,  isvalid:'1' ,
      ing_study_task_id:'-1', ing_task_id:'-1',  last_study_task_id:'-1',study_flow:[],
      creater:user_id , create_time:create_time ,start_time:create_time,is_over:'0' };
@@ -290,7 +290,7 @@ function getingstudytask(req,res,next){
     var study_log_id = req.body.study_log_id  ;
     if(study_log_id == '' || study_log_id == undefined)  return res.send({code:204,err:'study_log_id参数不正确'});
 
-    var user_id = req.session.userinfo.user_id , create_time =new Date();
+    var user_id = req.session.userinfo.user_id , create_time =moment().format('YYYY-MM-DD HH:mm:ss');
     var data = {study_log_id:study_log_id ,  user_id:user_id }
     console.log('开始获取学习任务',data);
     var userinfo = req.session.userinfo;
@@ -307,7 +307,7 @@ function getingstudytask(req,res,next){
 function completestudytask(req,res,next){
     var study_log_id = req.body.study_log_id  ;
     if(study_log_id == '' || study_log_id == undefined)  return res.send({code:204,err:'study_log_id参数不正确'});
-    var user_id = req.session.userinfo.user_id , create_time =new Date()  ;
+    var user_id = req.session.userinfo.user_id , create_time =moment().format('YYYY-MM-DD HH:mm:ss')  ;
     var data = {study_log_id:study_log_id,  user_id:user_id }
     console.log('开始获取学习任务',data);
     var userinfo = req.session.userinfo;

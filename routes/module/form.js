@@ -8,6 +8,7 @@ var path = require('path');
 //var formidable = require('formidable');
 var UUID = require('uuid');
 //var mongoClient =  require("./mongoClient");
+var moment=require('moment');
 
 var mongoDB = require("../DB/mongodb");
 
@@ -69,7 +70,7 @@ form.copyFormToStudy = function( data, callback ){
         if(htmlDocs.length <=0 )  return callback("表单不存在");
         var htmlDoc = htmlDocs[0];
         
-        var studydata={study_html_id:UUID.v1() , html_id:data.html_id , user_id:data.user_id, code:htmlDoc.code , isvalid:'1', creater:data.user_id ,create_time:new Date() };
+        var studydata={study_html_id:UUID.v1() , html_id:data.html_id , user_id:data.user_id, code:htmlDoc.code , isvalid:'1', creater:data.user_id ,create_time:moment().format('YYYY-MM-DD HH:mm:ss') };
         var table =  config[mgenv].mysql.header + "_form_study_html";
         //开始实例化表单
         templater.add( table , studydata, function(err,doc){
@@ -115,7 +116,7 @@ function fun_copy_form_ele_to_study(data,callback) {
         for(var i=0; i< formEleDocs.length; i++) {
             (function (i) {
                     result[i] = {study_html_ele_id:UUID.v1() , study_html_id:study_html_id,  html_ele_id: formEleDocs[i].html_ele_id ,
-                         user_id:user_id, name:formEleDocs[i].name ,  sid:formEleDocs[i].sid , type:formEleDocs[i].type ,  title:formEleDocs[i].title, isvalid:'1' , creater:data.user_id ,create_time:new Date()   };
+                         user_id:user_id, name:formEleDocs[i].name ,  sid:formEleDocs[i].sid , type:formEleDocs[i].type ,  title:formEleDocs[i].title, isvalid:'1' , creater:data.user_id ,create_time:moment().format('YYYY-MM-DD HH:mm:ss')   };
                          
                      if(formEleDocs[i].indicator == '1'){ //表单项关联
                         //result[i].value = formEleDocs[i].value; flag++;

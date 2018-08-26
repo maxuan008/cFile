@@ -68,7 +68,7 @@ var initChat = function(socket,id,datas){
             if($('.j-chat-room>.j-time-tag').length){
                 endTime = parseInt($('.j-chat-room>.j-time-tag').eq(0).attr('data-time')) - 1000;
             }else{
-                endTime = new Date().getTime();
+                endTime = moment().format('YYYY-MM-DD HH:mm:ss').getTime();
             }
 
             var startTime = new Date(endTime - 86400000).Format('yyyy-MM-dd hh:mm:ss');
@@ -76,7 +76,7 @@ var initChat = function(socket,id,datas){
             sendMessage('post',(ports.study.domain === location.origin ? ports.study.domain : ''),'/study/many/getTalkingHistory',{starttime:startTime,endtime:endTime,study_log_id:id},function(data){
                 if(data.code === 201){
                     if(data.datas.length){
-                        var lastTime = new Date().getTime();
+                        var lastTime = moment().format('YYYY-MM-DD HH:mm:ss').getTime();
                         for(var i=data.datas.length-1;i>=0;i--){
                             if(data.datas[i].user_id === userinfo.user_id){
                                 $('.j-message-record').after('<div class="me"><span><img src="'+(data.datas[i].headpngpath?(ports.net.domain == location.host ? ports.net.domain : '')+'/net/user/downloadpng?path='+data.datas[i].headpngpath:'/img/default/touxiang.png')+'"/><p>'+data.datas[i].fullname+'</p></span><p>'+newline(data.datas[i].txt)+'</p></div>');

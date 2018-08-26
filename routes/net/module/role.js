@@ -3,6 +3,7 @@ var templater = require("../../module/templater");
 var async = require("async");
 var config = require("../../../config/config.json");
 var UUID = require('uuid');
+var moment=require('moment');
 
 var mgenv = global.mgENV;
 
@@ -25,7 +26,7 @@ function role(data) {
 
 //添加固定的组织角色， student ：学生， teacher ：老师  ； 并锁定
 role.fixedrole = function (org_id, callback) {
-    var create_time = new Date();
+    var create_time = moment().format('YYYY-MM-DD HH:mm:ss');
     var datas = [
                  {role_id:UUID.v1() , org_id:org_id , name:"学生" , status:'2' , type:"student" ,create_time:create_time},
                  {role_id:UUID.v1() , org_id:org_id , name:"老师" , status:'2' , type:"teacher" ,create_time:create_time},

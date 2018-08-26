@@ -618,7 +618,7 @@ function deptshorefile(req,res) {
                                                           file_id:file_id , diskname:deptfile_diskname,type:type ,
                                                           user_id:user_id, size:filedoc.size
                                                            };
-                                            data.role_id_arry = role_id , data.create_time =new Date() ,data.creater =user_id ;
+                                            data.role_id_arry = role_id , data.create_time =moment().format('YYYY-MM-DD HH:mm:ss') ,data.creater =user_id ;
                                                 console.log('开始数据库写入共享文件信息：',data );
                                             templater.add( table , data, function(err,shore_filedoc){
                                                 if(err)	 return  res.send({code:204 , err:err});

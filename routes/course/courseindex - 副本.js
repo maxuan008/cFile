@@ -77,7 +77,7 @@ function addstep(req,res,next){
     if(course_id == '' || course_id == undefined)  return res.send({code:204,err:'course_id参数不正确'});
     if(activity_id == '' || activity_id == undefined)  return res.send({code:204,err:'activity_id参数不正确'});
     
-    var creater = req.session.userinfo.user_id , create_time = new Date() ; 
+    var creater = req.session.userinfo.user_id , create_time = moment().format('YYYY-MM-DD HH:mm:ss') ; 
     var data = {course_id:course_id , activity_id:activity_id,isvalid:'1' , creater:creater, create_time:create_time } ;
     course.addstep( data ,function(err,result){  //添加步骤
         if(err) return  res.send({code:204 , err:err});
@@ -115,7 +115,7 @@ function addtask(req,res,next){
     
     var step_id = req.body.step_id;
     if(step_id == '' || step_id == undefined)  return res.send({code:204,err:'step_id参数不正确'});
-    var creater = req.session.userinfo.user_id , create_time = new Date() ; 
+    var creater = req.session.userinfo.user_id , create_time = moment().format('YYYY-MM-DD HH:mm:ss') ; 
     var task_id = UUID.v1() ; 
     var data = { task_id: task_id , step_id : step_id ,isvalid:'1' , creater:creater, create_time:create_time };
 
@@ -161,7 +161,7 @@ function deltask(req,res,next){
 // 删除子任务
 function deltaskchild(req,res,next) {
     var updater = req.session.userinfo.user_id  ; 
-    var update_time = new Date();
+    var update_time = moment().format('YYYY-MM-DD HH:mm:ss');
     var task_child_id = req.body.task_child_id;
     if(task_child_id == '' || task_child_id == undefined)  return res.send({code:204,err:'task_child_id参数不正确'});
     var data = {isvalid:'0' , aupdate_time:update_time  ,   updater:updater  };
@@ -179,7 +179,7 @@ function deltaskchild(req,res,next) {
  //更新子任务
  function updatetaskchild(req,res,next) {
     var updater = req.session.userinfo.user_id  ; 
-    var update_time = new Date();
+    var update_time = moment().format('YYYY-MM-DD HH:mm:ss');
     var task_child_id = req.body.task_child_id;
     if(task_child_id == '' || task_child_id == undefined)  return res.send({code:204,err:'task_child_id参数不正确'});
     var data = {aupdate_time:update_time  ,   updater:updater };
@@ -217,7 +217,7 @@ function addtaskchild(req,res,next) {
     if(describe == '' || describe == undefined)  return res.send({code:204,err:'describe参数不正确'}); 
     if(period == '' || period == undefined)  return res.send({code:204,err:'period参数不正确'});  
     if(isasync == '' || isasync == undefined)  return res.send({code:204,err:'isasync参数不正确'});  
-    var create_time = new Date();
+    var create_time = moment().format('YYYY-MM-DD HH:mm:ss');
     
     var task_child_id = UUID.v1();
     var data = { task_child_id:task_child_id , task_id:task_id,  course_id: course_id,
@@ -261,7 +261,7 @@ function addtaskchild(req,res,next) {
 //删除活动
 function delactivity(req,res,next) {
     var updater = req.session.userinfo.user_id  ; 
-    var update_time = new Date();
+    var update_time = moment().format('YYYY-MM-DD HH:mm:ss');
     var activity_id = req.body.activity_id;
     if(activity_id == '' || activity_id == undefined)  return res.send({code:204,err:'activity_id参数不正确'});
     var data = {isvalid:'0' , aupdate_time:update_time  ,   updater:updater  };
@@ -286,7 +286,7 @@ function delactivity(req,res,next) {
  //更新活动信息，不含同步异步
  function updateactivity(req,res,next) {
     var updater = req.session.userinfo.user_id  ; 
-    var update_time = new Date();
+    var update_time = moment().format('YYYY-MM-DD HH:mm:ss');
     var activity_id = req.body.activity_id;
     if(activity_id == '' || activity_id == undefined)  return res.send({code:204,err:'activity_id参数不正确'});
     var data = {aupdate_time:update_time  ,   updater:updater };
@@ -324,7 +324,7 @@ function addactivity(req,res,next) {
     if(describe == '' || describe == undefined)  return res.send({code:204,err:'describe参数不正确'}); 
     if(period == '' || period == undefined)  return res.send({code:204,err:'period参数不正确'});  
     if(isasync == '' || isasync == undefined)  return res.send({code:204,err:'isasync参数不正确'});  
-    var create_time = new Date();
+    var create_time = moment().format('YYYY-MM-DD HH:mm:ss');
     
     var activity_id = UUID.v1();
     var data = {  activity_id:activity_id, course_child_id : course_child_id ,  course_id: course_id,
@@ -362,7 +362,7 @@ function addactivity(req,res,next) {
 //删除课程子集
 function delcoursechild(req,res,next) {
     var updater = req.session.userinfo.user_id  ; 
-    var update_time = new Date();
+    var update_time = moment().format('YYYY-MM-DD HH:mm:ss');
     var course_child_id = req.body.course_child_id;
     if(course_child_id == '' || course_child_id == undefined)  return res.send({code:204,err:'course_child_id参数不正确'});
     var data = {isvalid:'0' , aupdate_time:update_time  ,   updater:updater  };
@@ -380,7 +380,7 @@ function delcoursechild(req,res,next) {
  //更新课程子集
  function updatecoursechild(req,res,next) {
     var updater = req.session.userinfo.user_id  ; 
-    var update_time = new Date();
+    var update_time = moment().format('YYYY-MM-DD HH:mm:ss');
     var course_child_id = req.body.course_child_id;
     if(course_child_id == '' || course_child_id == undefined)  return res.send({code:204,err:'course_child_id参数不正确'});
     var data = {aupdate_time:update_time  ,   updater:updater };
@@ -431,7 +431,7 @@ function addcoursechild(req,res,next) {
     if(type == '' || type == undefined)  return res.send({code:204,err:'type参数不正确'});  
 
 
-    var create_time = new Date();
+    var create_time = moment().format('YYYY-MM-DD HH:mm:ss');
     
     var course_child_id = UUID.v1();
     var data = {  course_child_id : course_child_id ,  course_id: course_id,type:type,
@@ -493,7 +493,7 @@ function addcoursechild(req,res,next) {
 //删除课程
 function delcourse(req,res,next) {
     var updater = req.session.userinfo.user_id  ; 
-    var update_time = new Date();
+    var update_time = moment().format('YYYY-MM-DD HH:mm:ss');
     course_id = req.body.course_id;
     if(course_id == '' || course_id == undefined)  return res.send({code:204,err:'course_id参数不正确'});
     var data = {isvalid:'0' , aupdate_time:update_time  ,   updater:updater  };
@@ -511,7 +511,7 @@ function delcourse(req,res,next) {
  //更新课程
  function updatecourse(req,res,next) {
     var updater = req.session.userinfo.user_id  ; 
-    var update_time = new Date();
+    var update_time = moment().format('YYYY-MM-DD HH:mm:ss');
     course_id = req.body.course_id;
     if(course_id == '' || course_id == undefined)  return res.send({code:204,err:'course_id参数不正确'});
     var data = {aupdate_time:update_time  ,   updater:updater };
@@ -560,7 +560,7 @@ function addcourse(req,res,next) {
     if(describe == '' || describe == undefined)  return res.send({code:204,err:'describe参数不正确'}); 
     if(period == '' || period == undefined)  return res.send({code:204,err:'period参数不正确'}); 
     if(teacher_introduction == '' || teacher_introduction == undefined)  return res.send({code:204,err:'teacher_introduction参数不正确'}); 
-    var create_time = new Date();
+    var create_time = moment().format('YYYY-MM-DD HH:mm:ss');
     
     var course_id = UUID.v1();
     var data = {  course_id: course_id,

@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var redis =	require("redis");
 var session = require('express-session');
 var redisStore = require('connect-redis')(session);
-
+var moment=require('moment');
 
 //const MongoStore = require('connect-mongo')(session);
 var os = require('os');
@@ -237,7 +237,7 @@ app.use(function(err, req, res, next) {
 
 
 app.listen( config[mgenv].port  ,  function () {
-	var time = new Date();
+	var time = moment().format('YYYY-MM-DD HH:mm:ss');
 	
   console.log("App项目:  prot:" + config[mgenv].port  + ". Listen Succeed at:" + time );
 

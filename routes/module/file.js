@@ -8,6 +8,7 @@ var path = require('path');
 var formidable = require('formidable');
 var UUID = require('uuid');
 var mgenv = global.mgENV;
+var moment=require('moment');
 
 function cloudfile(data) {
      this.data = data;
@@ -125,7 +126,7 @@ cloudfile.initfolderdata = function(account,user_id,callback) {
             if(err)	 return callback(err);  
             if(userfolderdocs.length == 1) return callback(err, {user_folder_id:user_folder_id ,  diskname:diskname }  );
             else if(userfolderdocs.length == 0){  //创建用户文件夹数据库
-                var data = {user_folder_id:user_folder_id , user_id:user_id , diskname:diskname, creater:user_id , create_time:new Date()   };
+                var data = {user_folder_id:user_folder_id , user_id:user_id , diskname:diskname, creater:user_id , create_time:moment().format('YYYY-MM-DD HH:mm:ss')   };
                 templater.add( table , data, function(err,doc){
                     if(err)	 return callback(err);  
                      return callback(err, {user_folder_id:user_folder_id ,  diskname:diskname }  );
@@ -160,7 +161,7 @@ cloudfile.initorgfolderdata = function(org_id,callback) {
             if(err)	 return callback(err);  
             if(orgfolderdocs.length == 1) return callback(err, {org_folder_id:org_folder_id ,  diskname:diskname }  );
             else if(orgfolderdocs.length == 0){  //创建用户文件夹数据库
-                var data = {org_folder_id:org_folder_id , org_id:org_id , diskname:diskname,  create_time:new Date()   };
+                var data = {org_folder_id:org_folder_id , org_id:org_id , diskname:diskname,  create_time:moment().format('YYYY-MM-DD HH:mm:ss')   };
                 templater.add( table , data, function(err,doc){
                     if(err)	 return callback(err);  
                      return callback(err, {org_folder_id:org_folder_id ,  diskname:diskname }  );
@@ -209,7 +210,7 @@ cloudfile.initdeptfolderdata = function(org_id,dept_id ,callback) {
 
                     var org_folder_id = orgfolderdocs[0].org_folder_id
 
-                    var data = {dept_folder_id:dept_folder_id,org_folder_id:org_folder_id , org_id:org_id , diskname:diskname, dept_id:dept_id, create_time:new Date()   };
+                    var data = {dept_folder_id:dept_folder_id,org_folder_id:org_folder_id , org_id:org_id , diskname:diskname, dept_id:dept_id, create_time:moment().format('YYYY-MM-DD HH:mm:ss')   };
                     //console.log(data);
                     templater.add( table_2 , data, function(err,doc){
                         if(err)	 return callback(err);  
@@ -629,7 +630,7 @@ function fun_shorefoldertodept(user_id ,sourceFolderName,destFolderName,sourceFo
             shore_folder_id:shore_folder_id, org_id:org_id, dept_id:dept_id,
             dept_folder_id:dept_folder_id , parent_id:parent_id , name:destFolderName,
             child_folder_id:child_folder_id,role_id_arry:role_id ,
-            user_id:user_id, create_time: new Date(), creater : user_id 
+            user_id:user_id, create_time: moment().format('YYYY-MM-DD HH:mm:ss'), creater : user_id 
             };
 
         result = {shore_folder_id:shore_folder_id ,name:destFolderName };
@@ -681,7 +682,7 @@ function fun_shorefoldertodept(user_id ,sourceFolderName,destFolderName,sourceFo
                                         data_2.name = file.name, data_2.file_id = file.file_id ;
                                         data_2.diskname = data_tmp.destfile_diskname , data_2.type = file.type;
                                         data_2.role_id_arry = role_id;
-                                        data_2.create_time = new Date(),  data_2.creater = user_id ;
+                                        data_2.create_time = moment().format('YYYY-MM-DD HH:mm:ss'),  data_2.creater = user_id ;
                                         console.log('复制单个文件：',data_2); 
                                         templater.add( table_2 , data_2, function(err,doc){
                                             if(err) {console.log(err); if(returnFlag==0){returnFlag=1; return callback(err); } else return ; }

@@ -74,7 +74,7 @@ function updatestudyformele(req,res,next){
 
     var table =  config[mgenv].mysql.header + "_form_study_ele";
     var wherejson = {study_html_ele_id:study_html_ele_id}; 
-    var data = {value:value , updater: req.session.userinfo.user_id , update_time: new Date() };
+    var data = {value:value , updater: req.session.userinfo.user_id , update_time: moment().format('YYYY-MM-DD HH:mm:ss') };
     templater.update(table, wherejson,  data,  function(err,doc){
         if(err) return  res.send({code:204 , err:err});
         else res.send({ code:201 });
@@ -102,7 +102,7 @@ function addform(req,res,next){
     var code = req.body.code  ;
     if (code == '' || code == undefined) return res.send({ code: 204, err:'code参数不正确'});
 
-    var data = { html_id: UUID.v1(), code: code, status: '0', isvalid: '1', creater: req.session.userinfo.user_id, create_time: new Date() };
+    var data = { html_id: UUID.v1(), code: code, status: '0', isvalid: '1', creater: req.session.userinfo.user_id, create_time: moment().format('YYYY-MM-DD HH:mm:ss') };
     var table = config[mgenv].mysql.header + "_form_html";
     //添加表单
     templater.add(table, data, function (err, doc) {
@@ -137,7 +137,7 @@ function updateform(req,res,next){
     if (html_id == '' || html_id == undefined) return res.send({ code: 204, err:'html_id参数不正确'});
     if (code == '' || code == undefined) return res.send({ code: 204, err:'code参数不正确'});
 
-    var wherejson = { html_id: html_id}, data = { code: code, updater: req.session.userinfo.user_id, update_time: new Date() };
+    var wherejson = { html_id: html_id}, data = { code: code, updater: req.session.userinfo.user_id, update_time: moment().format('YYYY-MM-DD HH:mm:ss') };
     var table = config[mgenv].mysql.header + "_form_html";
 
     templater.update(table, wherejson, data, function (err, doc) {
@@ -180,7 +180,7 @@ function addformele(req, res, next) {
     if (html_id == '' || html_id == undefined) return res.send({ code: 204, err: 'html_id参数不正确' });
     if (name == '' || name == undefined) return res.send({ code: 204, err: 'name参数不正确' });
     if (type == '' || type == undefined) return res.send({ code: 204, err: 'type参数不正确' });
-    var data = { html_ele_id: UUID.v1() , html_id: html_id, name: name, type: type,  isvalid: '1', creater: req.session.userinfo.user_id, create_time: new Date() }
+    var data = { html_ele_id: UUID.v1() , html_id: html_id, name: name, type: type,  isvalid: '1', creater: req.session.userinfo.user_id, create_time: moment().format('YYYY-MM-DD HH:mm:ss') }
 
     if (title != undefined) data.title = title; if (value != undefined) data.value = value;
 
@@ -209,7 +209,7 @@ function addformeles(req, res, next) {
         if (eles[i].html_id == '' || eles[i].html_id == undefined) return res.send({ code: 204, err: 'html_id参数不正确' });
         if (eles[i].name == '' || eles[i].name == undefined) return res.send({ code: 204, err: 'name参数不正确' });
         if (eles[i].type == '' || eles[i].type == undefined) return res.send({ code: 204, err: 'type参数不正确' });
-        datas[i] = { html_ele_id: UUID.v1(), html_id: eles[i].html_id, name: eles[i].name, type: eles[i].type, isvalid: '1', creater: req.session.userinfo.user_id, create_time: new Date() };
+        datas[i] = { html_ele_id: UUID.v1(), html_id: eles[i].html_id, name: eles[i].name, type: eles[i].type, isvalid: '1', creater: req.session.userinfo.user_id, create_time: moment().format('YYYY-MM-DD HH:mm:ss') };
         if (eles[i].title != undefined) datas[i].title = title; if (eles[i].value != undefined) datas[i].value = value;
     }
 
@@ -250,7 +250,7 @@ function getformeles(req, res, next) {
 function updateformele(req, res, next) {
     var html_ele_id = req.body.html_ele_id, name = req.body.name, type = req.body.type, value = req.body.value, title = req.body.title;
     if (html_ele_id == '' || html_ele_id == undefined) return res.send({ code: 204, err: 'html_ele_id参数不正确' });
-    var data = { updater: req.session.userinfo.user_id, update_time: new Date() };
+    var data = { updater: req.session.userinfo.user_id, update_time: moment().format('YYYY-MM-DD HH:mm:ss') };
 
     if (name != undefined)   data.name = name;       if(type != undefined) data.type = type;
     if (title != undefined)  data.title = title;     if (value != undefined) data.value = value;
@@ -271,7 +271,7 @@ function updateformele_v2(req, res, next) {
     if (html_id == '' || html_id == undefined) return res.send({ code: 204, err: 'html_id参数不正确' });
     if (name == '' || name == undefined) return res.send({ code: 204, err: 'name参数不正确' });
 
-    var data = { name: name, updater: req.session.userinfo.user_id, update_time: new Date() };
+    var data = { name: name, updater: req.session.userinfo.user_id, update_time: moment().format('YYYY-MM-DD HH:mm:ss') };
 
     if (type != undefined) data.type = type; if (title != undefined) data.title = title;
     if (value != undefined) data.value = value;

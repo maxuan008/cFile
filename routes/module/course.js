@@ -8,7 +8,7 @@ var path = require('path');
 //var formidable = require('formidable');
 var UUID = require('uuid');
 //var mongoClient =  require("./mongoClient");
-
+var moment=require('moment');
 var mongoDB =  require("../DB/mongodb");
 
 var mgenv = global.mgENV;
@@ -534,7 +534,7 @@ course.delactivity=  function(data,wherejson,callback){
 //函数： 删除活动
 function fun_delactivity(data,callback){   
     var returnFlag = 0;
-    _ACT.update(data, { $set: {isvalid:'0', update_time:new Date()} },{multi:true},function(err,doc){  if(err) return callback(err);
+    _ACT.update(data, { $set: {isvalid:'0', update_time:moment().format('YYYY-MM-DD HH:mm:ss')} },{multi:true},function(err,doc){  if(err) return callback(err);
         _STEP.find({activity_id: data.activity_id ,isvalid:'1' }).toArray(function(err,stepdocs){  if(err) return callback(err);
             if(stepdocs <= 0) return callback(err);
 
@@ -561,7 +561,7 @@ function fun_delactivity(data,callback){
 
 function fun_addactivity(data,callback){
     var activity_id = UUID.v1(), course_id = data.course_id, 
-    isasync = data.isasync,  create_time = new Date();
+    isasync = data.isasync,  create_time = moment().format('YYYY-MM-DD HH:mm:ss');
     data.next_step_id = '-1' , data.activity_id = activity_id;
 
     if(isasync !='0' && isasync !='1') return callback("isasync参数不正确"); 
@@ -775,7 +775,7 @@ course.delstep =  function(step_id,callback){
 
 //函数： 删除步骤
 function fun_delstep(data,callback){   
-    _STEP.update(data, { $set: {isvalid:'0', update_time:new Date() } },{multi:true},function(err,doc){  if(err) return callback(err);
+    _STEP.update(data, { $set: {isvalid:'0', update_time:moment().format('YYYY-MM-DD HH:mm:ss') } },{multi:true},function(err,doc){  if(err) return callback(err);
         fun_deltask({step_id:data.step_id}, function(err){
             return  callback(err  );
         }) //fun_deltask end 
@@ -846,7 +846,7 @@ course.updatetask =  function(data, wherejson,callback){
 
 //=============函数：删除详细任务====================================
 function fun_deltask(data,callback){
-    _TASK.update( data, { $set: {isvalid:'0', update_time:new Date()} },{multi:true}, function(err,doc){ return  callback(err  );  });
+    _TASK.update( data, { $set: {isvalid:'0', update_time:moment().format('YYYY-MM-DD HH:mm:ss')} },{multi:true}, function(err,doc){ return  callback(err  );  });
 }
 
 //删除详细任务

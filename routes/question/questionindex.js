@@ -71,7 +71,7 @@ function addexam(req,res,next){
     var title = req.body.title  ;
     if(title == '' || title == undefined)  return res.send({code:204,err:'title参数不正确'});
 
-    var creater = req.session.userinfo.user_id , create_time = new Date() ; 
+    var creater = req.session.userinfo.user_id , create_time = moment().format('YYYY-MM-DD HH:mm:ss') ; 
     var data = {exam_id:UUID.v1(), title:title , iscompleted:'0' , isvalid:'1' , creater:creater, create_time:create_time } ;
     _QT.addexam( data ,function(err){  //添加步骤
         if(err) return  res.send({code:204 , err:err});
@@ -87,7 +87,7 @@ function updateexam(req,res,next){
     if(title == '' || title == undefined)      return res.send({code:204,err:'title参数不正确'});
     if(exam_id == '' || exam_id == undefined)  return res.send({code:204,err:'exam_id参数不正确'});
 
-    var updater = req.session.userinfo.user_id , update_time = new Date() ; 
+    var updater = req.session.userinfo.user_id , update_time = moment().format('YYYY-MM-DD HH:mm:ss') ; 
     var  wherejson = {exam_id:exam_id};
     var data = { title:title, updater:updater, update_time:update_time } ;
     _QT.updateexam( data , wherejson , function(err,result){  //添加步骤
@@ -114,7 +114,7 @@ function publishexam(req,res,next){
     var exam_id=req.body.exam_id ;
     if(exam_id == '' || exam_id == undefined)  return res.send({code:204,err:'exam_id参数不正确'});
 
-    var updater = req.session.userinfo.user_id , update_time = new Date() ; 
+    var updater = req.session.userinfo.user_id , update_time = moment().format('YYYY-MM-DD HH:mm:ss') ; 
     var  wherejson = {exam_id:exam_id};
     var data = { iscompleted:'1', updater:updater, update_time:update_time } ;
     _QT.updateexam( data , wherejson , function(err,result){ 
@@ -135,7 +135,7 @@ function addquestion(req,res,next){
     if(exam_id == '' || exam_id == undefined)  return res.send({code:204,err:'exam_id参数不正确'});
     if(type == '' || type == undefined)  return res.send({code:204,err:'type参数不正确'});  
 
-    var creater = req.session.userinfo.user_id , create_time = new Date() ; 
+    var creater = req.session.userinfo.user_id , create_time = moment().format('YYYY-MM-DD HH:mm:ss') ; 
     var data = {question_id:UUID.v1(),exam_id:exam_id, type:type,  isvalid:'1' , creater:creater, create_time:create_time } ;
     _QT.addquestion( data ,function(err,result){  //添加步骤
         if(err) return  res.send({code:204 , err:err});
@@ -150,7 +150,7 @@ function updatequestion(req,res,next){
     var question_id=req.body.question_id , score = req.body.score , des = req.body.des , degree = req.body.degree , parse = req.body.parse ;
     if(question_id == '' || question_id == undefined)      return res.send({code:204,err:'title参数不正确'});
    
-    var updater = req.session.userinfo.user_id , update_time = new Date() ; 
+    var updater = req.session.userinfo.user_id , update_time = moment().format('YYYY-MM-DD HH:mm:ss') ; 
     var wherejson = {question_id:question_id};
     var data = { updater:updater, update_time:update_time } ;    
 
@@ -170,7 +170,7 @@ function updatequestion(req,res,next){
 function delquestion(req,res,next){
     var question_id = req.body.question_id ;
     if(question_id == '' || question_id == undefined)  return res.send({code:204,err:'question_id参数不正确'});
-    var data = {isvalid:'0',updater:req.session.userinfo.user_id , update_time:new Date() } , wherejson = {question_id: question_id };
+    var data = {isvalid:'0',updater:req.session.userinfo.user_id , update_time:moment().format('YYYY-MM-DD HH:mm:ss') } , wherejson = {question_id: question_id };
     _QT.updatequestion( data , wherejson , function(err,result){  //添加步骤
         if(err) return  res.send({code:204 , err:err});
         return   res.send({ code:201  });
@@ -186,7 +186,7 @@ function addoption(req,res,next){
     if(question_id == '' || question_id == undefined)  return res.send({code:204,err:'question_id参数不正确'});
     if(exam_id == '' || exam_id == undefined)  return res.send({code:204,err:'exam_id参数不正确'});
 
-    var creater = req.session.userinfo.user_id , create_time = new Date() ; 
+    var creater = req.session.userinfo.user_id , create_time = moment().format('YYYY-MM-DD HH:mm:ss') ; 
     var data = {option_id: UUID.v1()  , question_id:question_id, exam_id:exam_id, isanswer:'0',isvalid:'1' , creater:creater, create_time:create_time } ;
     if(answertxt != undefined) data.answertxt = answertxt;
 
@@ -205,7 +205,7 @@ function updateoption(req,res,next){
     if(option_id == '' || option_id == undefined)      return res.send({code:204,err:' option_id 参数不正确'});
     if(type == '' || type == undefined)      return res.send({code:204,err:' type 参数不正确'}); 
 
-    var updater = req.session.userinfo.user_id , update_time = new Date() ; 
+    var updater = req.session.userinfo.user_id , update_time = moment().format('YYYY-MM-DD HH:mm:ss') ; 
     var wherejson = {option_id:option_id};
     var data = { updater:updater, update_time:update_time } ;    
 
@@ -227,7 +227,7 @@ function updateoption(req,res,next){
 function deloption(req,res,next){
     var option_id = req.body.option_id ;
     if(option_id == '' || option_id == undefined)  return res.send({code:204,err:'option_id参数不正确'});
-    var data = {isvalid:'0',updater:req.session.userinfo.user_id , update_time:new Date() } , wherejson = {option_id: option_id };
+    var data = {isvalid:'0',updater:req.session.userinfo.user_id , update_time:moment().format('YYYY-MM-DD HH:mm:ss') } , wherejson = {option_id: option_id };
     _QT.updateoption( data , wherejson , function(err,result){  //添加步骤
         if(err) return  res.send({code:204 , err:err});
         return   res.send({ code:201  });
@@ -240,7 +240,7 @@ function deloption_blank(req,res,next){
     var option_ids = JSON.parse(req.body.option_ids) ;
     console.log(option_ids , typeof(option_ids) );
     if(typeof(option_ids) != 'object' )  return res.send({code:204,err:'option_ids参数不正确'});
-    var data = {isvalid:'0',updater:req.session.userinfo.user_id , update_time:new Date() } ;
+    var data = {isvalid:'0',updater:req.session.userinfo.user_id , update_time:moment().format('YYYY-MM-DD HH:mm:ss') } ;
     _QT.deloption_blank( data , option_ids , function(err,result){  //添加步骤
         if(err) return  res.send({code:204 , err:err});
         return   res.send({ code:201  });
@@ -261,7 +261,7 @@ function setanswer(req,res,next){
     if( (type =='1' || type =='2') && isanswer == undefined )      return res.send({code:204,err:'isanswer参数不正确'});
     if( (type =='3' || type =='4') && answertxt == undefined )    return res.send({code:204,err:'answertxt参数不正确'});
 
-    var updater = req.session.userinfo.user_id , update_time = new Date(); 
+    var updater = req.session.userinfo.user_id , update_time = moment().format('YYYY-MM-DD HH:mm:ss'); 
     var data = {question_id:question_id, option_id:option_id,  isanswer:isanswer , updater:updater, update_time:update_time } ; 
         
     if(isanswer != undefined)  data.isanswer = isanswer;

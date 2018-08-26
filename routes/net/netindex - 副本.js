@@ -140,7 +140,7 @@ function login(req,res) {
 
         //登记登陆时间
         var table_user =  config[mgenv].mysql.header + "_user";
-        var nowtime = new Date();
+        var nowtime = moment().format('YYYY-MM-DD HH:mm:ss');
         var sqlstr_logintime = " update "+ table_user + "  SET `lastlogintime`='" +  nowtime + "' WHERE `user_id`='" + userinfo.user_id +"' ";
         mysql.query(sqlstr_logintime,function(err, login_docs){
             if(err)	 console.log(err); 
@@ -340,7 +340,7 @@ function addorg(req,res) {
             if(err)	 return  res.send({code:204 , err:err});
             if(accountflag == true) return  res.send({code:204 , err:"账户名已经存在"});
 
-            var create_time = new Date();
+            var create_time = moment().format('YYYY-MM-DD HH:mm:ss');
             //开始添加组织   
             var org_id = UUID.v1(); 
             var data={org_id:org_id  , name:name, creater:creater ,create_time:create_time};
@@ -498,7 +498,7 @@ function updateorgapp(req,res) {
     var status = req.body.status;
     if(status == '' || status == undefined)  return res.send({code:204,err:'status参数不正确'}); 
 
-    var update_time = new Date();
+    var update_time = moment().format('YYYY-MM-DD HH:mm:ss');
 
     var data = {status:status , update_time:update_time  ,   updater:updater };
 
@@ -678,7 +678,7 @@ function updateroleapp(req,res) {
     var status = req.body.status;
     if(status == '' || status == undefined)  return res.send({code:204,err:'status参数不正确'}); 
 
-    var update_time = new Date();
+    var update_time = moment().format('YYYY-MM-DD HH:mm:ss');
 
     var data = {status:status , update_time:update_time  ,   updater:updater };
 
@@ -752,7 +752,7 @@ function addapp(req,res) {
     var position = req.body.position;
     if(position == '' || position == undefined)  return res.send({code:204,err:'position参数不正确'});
 
-    var create_time = new Date();
+    var create_time = moment().format('YYYY-MM-DD HH:mm:ss');
     var data={app_id:id , name:name, isblank:isblank , domain:domain_1 ,  type:type , position:position,  creater:creater ,create_time:create_time};
 
     var href = req.body.href;
@@ -789,7 +789,7 @@ function updateapp(req,res) {
     var  name = req.body.name ,domain_1 = req.body.domain ,isblank = req.body.isblank ,type = req.body.type   ;
     var  app_id = req.body.app_id ,   position = req.body.position ,  href = req.body.href;
 
-    var update_time = new Date();
+    var update_time = moment().format('YYYY-MM-DD HH:mm:ss');
 
     var data = {app_id:id, update_time:update_time  ,   updater:updater };
     
@@ -883,7 +883,7 @@ function addappfun(req,res) {
 
     var type = req.body.type;
     if(type == '' || type == undefined)  return res.send({code:204,err:'type参数不正确'});
-    var create_time = new Date();
+    var create_time = moment().format('YYYY-MM-DD HH:mm:ss');
 
     var fun_id = UUID.v1();
     var data={fun_id:fun_id , app_id:app_id , name:name, href:href , type:type, creater:creater ,create_time:create_time };
@@ -936,7 +936,7 @@ function updateappfun(req,res) {
 
     var  name = req.body.name ,type = req.body.type  ,  href = req.body.href ;
 
-    var update_time = new Date();
+    var update_time = moment().format('YYYY-MM-DD HH:mm:ss');
 
     var data = { update_time:update_time  ,   updater:updater };
     if( name != undefined)   data.name = name;
@@ -1009,7 +1009,7 @@ function addrole(req,res) {
     var type = req.body.type;
     if(type == '' || type == undefined)  return res.send({code:204,err:'type参数不正确'});
 
-    var create_time = new Date();
+    var create_time = moment().format('YYYY-MM-DD HH:mm:ss');
     var data={role_id:UUID.v1() , org_id:org_id , name:name, status:status , type:type, creater:creater ,create_time:create_time};
     var table =  config[mgenv].mysql.header + "_role";
 
@@ -1066,7 +1066,7 @@ function updaterole(req,res) {
     var  name = req.body.name ,type = req.body.type  ,  status = req.body.status;
     if ( (name =='' || name ==undefined ) && (type =='' || type ==undefined ) && (status =='' || status ==undefined ) )  return res.send({code:204,err:'没有更新数据'});
 
-    var update_time = new Date();
+    var update_time = moment().format('YYYY-MM-DD HH:mm:ss');
 
     var data = { update_time:update_time  ,   updater:updater };
     if( name != undefined)   data.name = name;

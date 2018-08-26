@@ -9,6 +9,7 @@ var formidable = require('formidable');
 var UUID = require('uuid');
 //var mongoClient =  require("./mongoClient");
 var syncRequest = require('sync-request');
+var moment=require('moment');
 
 var task = require('./task');
 var course = require('./course');
@@ -269,7 +270,7 @@ function fun_copytaskFile_to_study(userinfo,eledoc, study_result_json,callback){
                 var studyfilejson = {study_file_id:UUID.v1(), task_file_id:eledoc.task_file_id,study_result_id:study_result_json.study_result_id, study_log_id:study_result_json.study_log_id,
                    study_task_id:study_result_json.study_task_id, course_child_id: study_result_json.course_child_id , user_id: userinfo.user_id,
                    filename:taskfiledoc.filename ,filetype:taskfiledoc.filetype , diskname:diskname,size: taskfiledoc.size , 
-                   filepath:study_filepath, source_filepath: task_filepath, isvalid:'1' ,create_time: new Date()   };
+                   filepath:study_filepath, source_filepath: task_filepath, isvalid:'1' ,create_time: moment().format('YYYY-MM-DD HH:mm:ss')   };
                    
                    //console.log('插入文件信息:', studyfilejson);
                 _STUDY_FILE.insert(studyfilejson,function(err,doctmp){ return callback(err,studyfilejson); });
@@ -292,7 +293,7 @@ function fun_copy_taskEle_to_study(userinfo,taskdoc,studytaskdoc,callback){
                     var eledoc = eledocs[i], type=eledocs[i].type;     
                     study_result_json[i] = {study_result_id:UUID.v1(), study_task_id:studytaskdoc.study_task_id ,course_child_id: taskdoc.course_child_id , 
                     study_log_id:studytaskdoc.study_log_id , task_ele_id:eledocs[i].task_ele_id, user_id:studytaskdoc.user_id ,type:type ,isvalid:'1' ,
-                     creater:studytaskdoc.user_id , create_time: new Date()  };
+                     creater:studytaskdoc.user_id , create_time: moment().format('YYYY-MM-DD HH:mm:ss')  };
                     if (eledocs[i].type == 'text') study_result_json[i].txt = eledocs[i].txt;
 
                     console.log("插入的学习结果数据：", taskdoc, study_result_json[i]);
@@ -343,8 +344,8 @@ function fun_copy_task_to_study(userinfo ,  taskdoc, logdoc,callback){
         //console.log('实例化：创建学习任务信息：', studytaskdoc);
 
        var studytaskdoc = {study_task_id:UUID.v1(), study_log_id:logdoc.study_log_id, course_child_id:logdoc.course_child_id,step_id:taskdoc.step_id ,
-        task_id:taskdoc.task_id , user_id:logdoc.user_id  ,is_over:'0',  isvalid:'1' ,   start_time: new Date() ,
-         question_id: taskdoc.question_id  , creater:logdoc.user_id  , create_time: new Date()};
+        task_id:taskdoc.task_id , user_id:logdoc.user_id  ,is_over:'0',  isvalid:'1' ,   start_time: moment().format('YYYY-MM-DD HH:mm:ss') ,
+         question_id: taskdoc.question_id  , creater:logdoc.user_id  , create_time: moment().format('YYYY-MM-DD HH:mm:ss')};
                 
 
         var ep =new EventProxy();
@@ -437,7 +438,7 @@ function create_new_studytask(userinfo,logdoc,callback){
              if(err)  return callback(err);
              
              if(next_task_doc == undefined) { //如果没有下一个学习任务了,情境已学习完了
-                 fun_updatestudylog({is_over:'1', end_time:new Date() } , {study_log_id:study_log_id} , function(err){ if(err)  return callback(err);
+                 fun_updatestudylog({is_over:'1', end_time:moment().format('YYYY-MM-DD HH:mm:ss') } , {study_log_id:study_log_id} , function(err){ if(err)  return callback(err);
                     return callback(err,{is_over:'1'} );
                  });
                 
@@ -454,7 +455,7 @@ function create_new_studytask(userinfo,logdoc,callback){
                         
                         fun_updatestudylog(newlogData, {study_log_id:study_log_id} , function(err){  if(err)  return callback(err);
                             if(ing_study_task_id == '-1') return callback(err,studytaskdoc);
-                            var oldtask_data = {next_study:studytaskdoc.study_task_id , next_task:next_task_doc.task_id, end_time: new Date()  }
+                            var oldtask_data = {next_study:studytaskdoc.study_task_id , next_task:next_task_doc.task_id, end_time: moment().format('YYYY-MM-DD HH:mm:ss')  }
                             fun_updatestudytask(oldtask_data, {study_task_id:ing_study_task_id } ,function(err){
                                 return callback(err,studytaskdoc)
                             });
@@ -782,7 +783,7 @@ function fun_createTeamStudyStep(data, callback) {
         var studyStepArr = [];
         for(var i=0; i< teamdocs.length; i++){
             studyStepArr[studyStepArr.length] = {study_step_id:UUID.v1(),study_log_id:study_log_id,step_id:step_id,
-                study_team_id:teamdocs[i].study_team_id, user_id:teamdocs[i].user_id ,isstart:'0' , isvalid:'1' , create_time: new Date()
+                study_team_id:teamdocs[i].study_team_id, user_id:teamdocs[i].user_id ,isstart:'0' , isvalid:'1' , create_time: moment().format('YYYY-MM-DD HH:mm:ss')
             };
         } //for end  
         
@@ -818,7 +819,7 @@ function fun_copy_task_to_study_many(userinfo ,  taskdoc, logdoc,study_stepdoc, 
     //console.log('AAA:', userinfo, taskdoc, logdoc, study_stepdoc );
     var studytaskdoc = {study_task_id:UUID.v1(), study_log_id:logdoc.study_log_id, course_child_id:logdoc.course_child_id,step_id:taskdoc.step_id ,
         task_id: taskdoc.task_id, user_id: study_stepdoc.user_id  ,is_over:'0', study_step_id:study_stepdoc.study_step_id, rolename:taskdoc.rolename,
-        isvalid: '1', start_time: new Date(), question_id: taskdoc.question_id, creater: study_stepdoc.user_id  , create_time: new Date()};
+        isvalid: '1', start_time: moment().format('YYYY-MM-DD HH:mm:ss'), question_id: taskdoc.question_id, creater: study_stepdoc.user_id  , create_time: moment().format('YYYY-MM-DD HH:mm:ss')};
 
     var ep =new EventProxy();
 
@@ -874,7 +875,7 @@ function fun_copy_step_onlyoffice(study_log_id, step_id, callback) {
                                 if (err) { console.log(err); if (returnFlag == 0) { returnFlag = 1; return callback(err); } else return; }
 
                                 var stepStudyfilejson = {
-                                    study_step_file_id: UUID.v1(), study_log_id: study_log_id,  step_id: step_id  , isvalid: '1', create_time: new Date() ,
+                                    study_step_file_id: UUID.v1(), study_log_id: study_log_id,  step_id: step_id  , isvalid: '1', create_time: moment().format('YYYY-MM-DD HH:mm:ss') ,
                                     filename: filename, filetype: filetype, diskname: diskname, filepath: targetpath
                                 };
                                 //console.log('插入协作文档信息:', stepStudyfilejson);
@@ -1040,7 +1041,7 @@ study.getlearn_next = function(data,callback){
                          if (err) return callback(err); nextStepDoc_GO = nextdoc;
                           
                         if (nextdoc == null) {
-                            _STUDY_LOG.update({ study_log_id: study_log_id }, { $set: { isstart: '2', is_over: '1', end_time: new Date() } }, { multi: true }, function (err, doc) {
+                            _STUDY_LOG.update({ study_log_id: study_log_id }, { $set: { isstart: '2', is_over: '1', end_time: moment().format('YYYY-MM-DD HH:mm:ss') } }, { multi: true }, function (err, doc) {
                                 if (err) return callback(err);
                                 result = { flag: '4' };
                                 return callback(err, result);
@@ -1189,7 +1190,7 @@ function fun_getTalkingInfo(wherestr,callback) {
 
 
  study.getTodayTalkingInfo = function (data, callback) {
-     var datetime = new Date() , monthTmp = datetime.getMonth() + 1  
+     var datetime = moment().format('YYYY-MM-DD HH:mm:ss') , monthTmp = datetime.getMonth() + 1  
          , startDate = datetime.getFullYear() + "-" + monthTmp + "-" + datetime.getDate() + " 00:00:00"
              , endDate = datetime.getFullYear() + "-" + monthTmp + "-" + datetime.getDate() + " 23:59:59";
      var wherestr = " study_log_id = '" + data.study_log_id + "' and  isvalid='1' and  sendtime > '" + startDate + "' and  sendtime <  '" + endDate + "'";
